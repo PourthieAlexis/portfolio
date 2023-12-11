@@ -9,16 +9,36 @@ import PortfolioComponent from "./components/PortfolioComponent";
 import SkillComponent from "./components/SkillComponent";
 import ParticlesComponent from "./components/Particle";
 import Footer from "./components/Footer";
+import VinaSansRegular from "./assets/fonts/VinaSans-Regular.ttf";
+import NovaSquareRegular from "./assets/fonts/NovaSquare-Regular.ttf";
+import KdamThmorProRegular from "./assets/fonts/KdamThmorPro-Regular.ttf";
 
 const GlobalStyle = createGlobalStyle`
+@font-face {
+  font-family: 'VinaSans-Regular';
+  src: url(${VinaSansRegular}) format('truetype');
+}
+
+@font-face {
+  font-family: 'NovaSquare-Regular';
+  src: url(${NovaSquareRegular}) format('truetype');
+
+}
+
+@font-face {
+  font-family: 'KdamThmorPro-Regular';
+  src: url(${KdamThmorProRegular}) format('truetype');
+
+}
+
   :root {
     --dark-background-color: ${(props) => props.theme.backgroundColorPrimary};
     --light-background-color: ${(props) => props.theme.backgroundColorPrimary};
     --primary-color: #212D40;
     --dark-text-color: ${(props) => props.theme.textColor};
     --light-text-color: ${(props) => props.theme.textColor};
-    --font-family: 'Kdam Thmor Pro', sans-serif;
-    --font-familyText: 'Nova Square', sans-serif;
+    --font-family: 'KdamThmorPro-Regular', sans-serif;
+    --font-familyText: 'NovaSquare-Regular', sans-serif;
   }
 
   body {
