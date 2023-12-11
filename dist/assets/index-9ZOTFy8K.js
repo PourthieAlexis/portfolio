@@ -582,15 +582,32 @@ Error generating stack: `+t.message+`
       align-items: center;
     }
   }
-`,uSe=()=>L.jsxs(lSe,{children:[L.jsxs(rSe,{children:[L.jsx(nSe,{children:"Me contacter"}),L.jsx(iSe,{children:"Vous pouvez me contacter avec les réseaux socieaux suivants"})]}),L.jsxs(sSe,{children:[L.jsxs("p",{children:[L.jsx(Na.MailOutline,{title:"Mail",height:"2rem",width:"2rem"}),"alexispourthie@gmail.com"]}),L.jsxs("p",{children:[L.jsx(Na.CallOutline,{title:"Phone",height:"2rem",width:"2rem"}),"06.78.29.33.26"]})]})]}),oSe=jP`
+`,uSe=()=>L.jsxs(lSe,{children:[L.jsxs(rSe,{children:[L.jsx(nSe,{children:"Me contacter"}),L.jsx(iSe,{children:"Vous pouvez me contacter avec les réseaux socieaux suivants"})]}),L.jsxs(sSe,{children:[L.jsxs("p",{children:[L.jsx(Na.MailOutline,{title:"Mail",height:"2rem",width:"2rem"}),"alexispourthie@gmail.com"]}),L.jsxs("p",{children:[L.jsx(Na.CallOutline,{title:"Phone",height:"2rem",width:"2rem"}),"06.78.29.33.26"]})]})]}),oSe="/assets/VinaSans-Regular-LjK2WFzW.ttf",cSe="/assets/NovaSquare-Regular-gVr2GeG6.ttf",fSe="/assets/KdamThmorPro-Regular-sdo02gUH.ttf",dSe=jP`
+@font-face {
+  font-family: 'VinaSans-Regular';
+  src: url(${oSe}) format('truetype');
+}
+
+@font-face {
+  font-family: 'NovaSquare-Regular';
+  src: url(${cSe}) format('truetype');
+
+}
+
+@font-face {
+  font-family: 'KdamThmorPro-Regular';
+  src: url(${fSe}) format('truetype');
+
+}
+
   :root {
     --dark-background-color: ${r=>r.theme.backgroundColorPrimary};
     --light-background-color: ${r=>r.theme.backgroundColorPrimary};
     --primary-color: #212D40;
     --dark-text-color: ${r=>r.theme.textColor};
     --light-text-color: ${r=>r.theme.textColor};
-    --font-family: 'Kdam Thmor Pro', sans-serif;
-    --font-familyText: 'Nova Square', sans-serif;
+    --font-family: 'KdamThmorPro-Regular', sans-serif;
+    --font-familyText: 'NovaSquare-Regular', sans-serif;
   }
 
   body {
@@ -616,12 +633,12 @@ Error generating stack: `+t.message+`
       opacity: 1;
     }
   }
-`,cSe=Y.div`
+`,hSe=Y.div`
   display: flex;
   flex-direction: column;
-`,fSe=Y.main`
+`,vSe=Y.main`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`;function dSe(){const{isLightMode:r}=$P(),a=r?gye:mye;return L.jsxs(WP,{theme:a,children:[L.jsx(oSe,{}),L.jsx(aSe,{}),L.jsxs(cSe,{children:[L.jsx(D_e,{}),L.jsxs(fSe,{children:[L.jsx(tye,{}),L.jsx(G_e,{}),L.jsx(vye,{}),L.jsx(Ake,{}),L.jsx(Oye,{})]}),L.jsx(uSe,{})]})]})}yu.createRoot(document.getElementById("root")).render(L.jsx(et.StrictMode,{children:L.jsx(L_e,{children:L.jsx(dSe,{})})}));
+`;function gSe(){const{isLightMode:r}=$P(),a=r?gye:mye;return L.jsxs(WP,{theme:a,children:[L.jsx(dSe,{}),L.jsx(aSe,{}),L.jsxs(hSe,{children:[L.jsx(D_e,{}),L.jsxs(vSe,{children:[L.jsx(tye,{}),L.jsx(G_e,{}),L.jsx(vye,{}),L.jsx(Ake,{}),L.jsx(Oye,{})]}),L.jsx(uSe,{})]})]})}yu.createRoot(document.getElementById("root")).render(L.jsx(et.StrictMode,{children:L.jsx(L_e,{children:L.jsx(gSe,{})})}));

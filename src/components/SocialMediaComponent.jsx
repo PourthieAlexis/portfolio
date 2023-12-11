@@ -1,4 +1,4 @@
-import linkedIn from "../assets/images/linkedin_logo.png";
+import linkedIn from "../assets/images/React_logo.png";
 import { MailOutline } from "react-ionicons";
 import { CallOutline } from "react-ionicons";
 import { PersonOutline } from "react-ionicons";
