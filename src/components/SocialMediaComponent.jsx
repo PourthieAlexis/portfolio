@@ -2,6 +2,7 @@ import { MailOutline } from "react-ionicons";
 import { CallOutline } from "react-ionicons";
 import { PersonOutline } from "react-ionicons";
 import styled from "styled-components";
+import linkedIn from "../assets/images/linkedin_logo.png";
 import CV from "../assets/CV/Alexis_Pourthié_CV.pdf";
 
 const SocialMedia = styled.div`
@@ -71,6 +72,7 @@ const SocialMediaComponent = () => {
         rel="noopener noreferrer"
       >
         <p>LinkedIn</p>
+        <img src={linkedIn} alt="Logo linkedIn" width="32" height="32" />
       </LinkedinIcon>
       <MailIcon href="mailto:alexispourthie@gmail.com">
         <p>Mail</p>
