@@ -2,7 +2,7 @@ import { MailOutline } from "react-ionicons";
 import { CallOutline } from "react-ionicons";
 import { PersonOutline } from "react-ionicons";
 import styled from "styled-components";
-import linkedIn from "../assets/images/linkedin_logo.png";
+import linkedIn from "../assets/images/Linkedin_logo.png";
 import CV from "../assets/CV/Alexis_Pourthié_CV.pdf";
 
 const SocialMedia = styled.div`
