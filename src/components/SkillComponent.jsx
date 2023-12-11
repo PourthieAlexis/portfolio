@@ -8,6 +8,7 @@ import SymfonyLogo from "../assets/images/Symfony_logo.png";
 import LaravelLogo from "../assets/images/Laravel_logo.png";
 import ReactLogo from "../assets/images/React_logo.png";
 import JiraLogo from "../assets/images/Jira_logo.png";
+import MySQL_Logo from "../assets/images/MySQL_logo.png";
 import styled from "styled-components";
 
 const SkillContainer = styled.div`
@@ -41,17 +42,20 @@ const skills = [
   { id: 5, logo: ReactLogo, name: "React" },
   { id: 6, logo: LaravelLogo, name: "Laravel" },
   { id: 7, logo: JiraLogo, name: "Jira" },
+  { id: 8, logo: MySQL_Logo, name: "MySQL" },
 ];
 
 const SkillComponent = () => {
   const settings = {
-    dots: true,
+    accessibility: true,
     infinite: true,
+    dots: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 2,
     autoplay: true,
     arrows: false,
+    focusOnSelect: true,
   };
 
   return (
