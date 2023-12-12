@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Covoitease from "../assets/images/covoitease.png";
 import { useState } from "react";
 import Popup from "./PopUpComponent";
+import UBNI_logo from "../assets/images/UBNI_logo.png";
 
 const PortfolioContainer = styled.div`
   min-height: 100vh;
@@ -43,7 +44,7 @@ const ButtonCard = styled.button`
   opacity: 0;
   height: 2rem;
   position: absolute;
-  top: 11rem;
+  top: 12rem;
   cursor: pointer;
   left: 5rem;
   border-radius: 1rem;
@@ -105,11 +106,13 @@ const PortfolioComponent = () => {
     {
       id: "projet1",
       text: "Covoitease est un projet de covoiturage avec accès au personne à mobilité réduite, j'ai effectué ce projet dans une équipe agile à l'incubateur de Euratechnologies",
+      image: Covoitease,
       techno: ["Symfony API", "React", "MySQL", "Github", "Jira"],
     },
     {
       id: "projet2",
       text: "Joukemy est une application mobile qui permet de parier sur des matchs e-sport avec ses amis en utilisant un système de point. J'ai effectué ce projet pendant mon stage chez UBNI",
+      image: UBNI_logo,
       techno: [
         "Laravel API",
         "React Native",
@@ -155,7 +158,7 @@ const PortfolioComponent = () => {
             delay={0.5}
           >
             <ImgContainer>
-              <img src={Covoitease} alt="covoitease logo" />
+              <img src={UBNI_logo} alt="covoitease logo" />
             </ImgContainer>
             <ButtonCard>Voir Projet</ButtonCard>
           </Card>
@@ -176,7 +179,6 @@ const PortfolioComponent = () => {
         <Popup
           onClose={handleVoirProjetClick}
           visible={popupOpen}
-          image={Covoitease}
           projet={selectedProject}
         ></Popup>
       )}

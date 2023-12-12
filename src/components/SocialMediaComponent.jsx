@@ -84,19 +84,19 @@ const SocialMediaComponent = () => {
         />
       </MailIcon>
       <PhoneIcon href="tel:0678293326">
-        <p>Phone</p>
+        <p>Téléphone</p>
         <CallOutline
           color={"white"}
-          title={"Phone"}
+          title={"Téléphone"}
           height="2rem"
           width="2rem"
         />
       </PhoneIcon>
       <ResumeIcon href={CV} target="_blank" rel="noopener noreferrer">
-        <p>Resume</p>
+        <p>CV</p>
         <PersonOutline
           color={"white"}
-          title={"Resume"}
+          title={"CV"}
           height="2rem"
           width="2rem"
         />

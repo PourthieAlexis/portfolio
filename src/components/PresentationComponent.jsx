@@ -42,7 +42,6 @@ const Hr = styled.hr`
 `;
 
 const TextContainer = styled.div`
-  align-self: center;
   width: 100%;
   opacity: 0;
   font-family: var(--font-familyText);
@@ -55,7 +54,6 @@ const TextContainer = styled.div`
 const PresentationWrapper = styled.div`
   position: relative;
   z-index: 2;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,7 +79,6 @@ const ImageContainer = styled.div`
 `;
 
 const Text = styled.p`
-  text-align: center;
   font-size: x-large;
 `;
 

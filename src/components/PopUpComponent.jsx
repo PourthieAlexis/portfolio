@@ -119,13 +119,13 @@ const Overlay = styled.div`
   z-index: 999;
 `;
 
-const Popup = ({ onClose, visible, image, projet }) => {
+const Popup = ({ onClose, visible, projet }) => {
   return (
     <>
       <Overlay onClick={onClose} />
       <PopupContainer visible={visible} animation={visible}>
         <ImgContainer>
-          <img src={image} alt={image} />
+          <img src={projet.image} alt={projet.image} />
         </ImgContainer>
         <Content>
           <TextContainer>
