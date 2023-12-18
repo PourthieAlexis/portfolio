@@ -157,17 +157,6 @@ const PortfolioComponent = () => {
             </ImgContainer>
             <ButtonCard>Voir Projet</ButtonCard>
           </Card>
-
-          <Card
-            onClick={() => handleVoirProjetClick("2")}
-            isVisible={inView}
-            delay={1}
-          >
-            <ImgContainer>
-              <img src={Covoitease} alt="covoitease logo" />
-            </ImgContainer>
-            <ButtonCard>Voir Projet</ButtonCard>
-          </Card>
         </CardContainer>
       </PortfolioContainer>
       {popupOpen && (
