@@ -121,11 +121,6 @@ const PortfolioComponent = () => {
         "Gitlab",
       ],
     },
-    {
-      id: "projet3",
-      text: "Joukemy est un projet",
-      techno: ["Laravel", "React Native", "PostegreSQL"],
-    },
   ];
 
   const handleVoirProjetClick = (index) => {
