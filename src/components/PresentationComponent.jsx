@@ -5,7 +5,6 @@ import breakpoints from "../assets/breakpoints";
 
 const PresentationContainer = styled.section`
   position: relative;
-  min-height: 100vh;
   height: auto;
   width: 100%;
   box-sizing: border-box;
@@ -43,6 +42,10 @@ const Hr = styled.hr`
 
 const TextContainer = styled.div`
   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   opacity: 0;
   font-family: var(--font-familyText);
   animation: ${(props) =>

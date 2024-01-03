@@ -104,13 +104,14 @@ const PortfolioComponent = () => {
 
   const projects = [
     {
-      id: "projet1",
+      id: "0",
       text: "Covoitease est un projet de covoiturage avec accès au personne à mobilité réduite, j'ai effectué ce projet dans une équipe agile à l'incubateur de Euratechnologies",
       image: Covoitease,
       techno: ["Symfony API", "React", "MySQL", "Github", "Jira"],
+      delay: 0,
     },
     {
-      id: "projet2",
+      id: "1",
       text: "Joukemy est une application mobile qui permet de parier sur des matchs e-sport avec ses amis en utilisant un système de point. J'ai effectué ce projet pendant mon stage chez UBNI",
       image: UBNI_logo,
       techno: [
@@ -120,6 +121,7 @@ const PortfolioComponent = () => {
         "Github",
         "Gitlab",
       ],
+      delay: 0.5,
     },
   ];
 
@@ -136,27 +138,21 @@ const PortfolioComponent = () => {
           <Hr />
         </Title>
         <CardContainer>
-          <Card
-            onClick={() => handleVoirProjetClick("0")}
-            isVisible={inView}
-            delay={0}
-          >
-            <ImgContainer>
-              <img src={Covoitease} alt="covoitease logo" />
-            </ImgContainer>
-            <ButtonCard>Voir Projet</ButtonCard>
-          </Card>
-
-          <Card
-            onClick={() => handleVoirProjetClick("1")}
-            isVisible={inView}
-            delay={0.5}
-          >
-            <ImgContainer>
-              <img src={UBNI_logo} alt="covoitease logo" />
-            </ImgContainer>
-            <ButtonCard>Voir Projet</ButtonCard>
-          </Card>
+          {projects.map((project, index) => {
+            return (
+              <Card
+                onClick={() => handleVoirProjetClick(index)}
+                isVisible={inView}
+                delay={project.delay}
+                key={project.id}
+              >
+                <ImgContainer>
+                  <img src={project.image} alt={project.image} />
+                </ImgContainer>
+                <ButtonCard>Voir Projet</ButtonCard>
+              </Card>
+            );
+          })}
         </CardContainer>
       </PortfolioContainer>
       {popupOpen && (

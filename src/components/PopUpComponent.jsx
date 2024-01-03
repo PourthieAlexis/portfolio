@@ -153,7 +153,6 @@ const Popup = ({ onClose, visible, projet }) => {
 Popup.propTypes = {
   onClose: PropTypes.func.isRequired,
   visible: PropTypes.bool.isRequired,
-  image: PropTypes.string.isRequired,
   projet: PropTypes.object.isRequired,
 };
 
