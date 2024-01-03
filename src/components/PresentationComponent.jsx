@@ -25,6 +25,7 @@ const PresentationContainer = styled.section`
 `;
 
 const Title = styled.div`
+  position: absolute;
   font-size: xx-large;
   text-align: center;
   opacity: 0;
@@ -34,6 +35,9 @@ const Title = styled.div`
       : "none"};
   h1 {
     font-weight: 100;
+  }
+  @media (max-width: ${breakpoints.laptop}) {
+    position: relative;
   }
 `;
 
@@ -62,7 +66,6 @@ const PresentationWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   border-top-right-radius: 1rem;
-  height: 100%;
   padding: 1rem;
 `;
 
