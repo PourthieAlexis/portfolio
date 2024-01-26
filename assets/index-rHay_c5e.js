@@ -248,7 +248,7 @@ Error generating stack: `+t.message+`
   margin: 0;
   align-self: start;
   justify-content: start;
-`,I_e=()=>L.jsxs(V_e,{children:[L.jsxs(W_e,{children:[L.jsx(F_e,{children:"Bonjour, je suis"}),L.jsx(j_e,{children:"Alexis Pourthié"}),L.jsx(jP,{children:"Développeur Web"})]}),L.jsx(H_e,{})]}),U_e="/portfolio/assets/Linkedin_logo-1YCldOSW.png",$_e="/portfolio/assets/Alexis_Pourthié_CV-hCO40dxj.pdf",G_e=Y.div`
+`,I_e=()=>L.jsxs(V_e,{children:[L.jsxs(W_e,{children:[L.jsx(F_e,{children:"Bonjour, je suis"}),L.jsx(j_e,{children:"Alexis Pourthié"}),L.jsx(jP,{children:"Développeur Web"})]}),L.jsx(H_e,{})]}),U_e="/portfolio/assets/Linkedin_logo-1YCldOSW.png",$_e="/portfolio/assets/Alexis_Pourthié_CV-kh7pjW7S.pdf",G_e=Y.div`
   position: fixed;
   left: 0;
   top: 10%;
