@@ -266,11 +266,21 @@ Error generating stack: `+t.message+`
   height: 100%;
   justify-content: end;
   align-items: center;
+  animation: 1s anim-socialMedia ease-out;
   cursor: pointer;
   transition: left 1s ease;
   gap: 2rem;
   padding-right: 1rem;
   color: white;
+
+  @keyframes anim-socialMedia {
+    from {
+      left: -14rem;
+    }
+    to {
+      left: -7rem;
+    }
+  }
 
   &:hover {
     left: 0;
