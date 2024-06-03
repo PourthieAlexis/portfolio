@@ -1,6 +1,6 @@
 import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
-import presentationImage from "../assets/images/presentationImage.jpg";
+import presentationImage from "../assets/images/presentationImage.webp";
 import breakpoints from "../assets/breakpoints";
 
 const PresentationContainer = styled.section`

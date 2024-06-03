@@ -1,9 +1,9 @@
 import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
-import Covoitease from "../assets/images/covoitease.png";
+import Covoitease from "../assets/images/covoitease.webp";
 import { useState } from "react";
 import Popup from "./PopUpComponent";
-import UBNI_logo from "../assets/images/UBNI_logo.png";
+import UBNI_logo from "../assets/images/UBNI_logo.webp";
 
 const PortfolioContainer = styled.div`
   min-height: 100vh;

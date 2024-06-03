@@ -1,14 +1,14 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import HtmlLogo from "../assets/images/HTML5_logo.png";
-import CssLogo from "../assets/images/CSS3_logo.png";
-import JsLogo from "../assets/images/JS_logo.png";
-import SymfonyLogo from "../assets/images/Symfony_logo.png";
-import LaravelLogo from "../assets/images/Laravel_logo.png";
-import ReactLogo from "../assets/images/React_logo.png";
-import JiraLogo from "../assets/images/Jira_logo.png";
-import MySQL_Logo from "../assets/images/MySQL_logo.png";
+import HtmlLogo from "../assets/images/HTML5_logo.webp";
+import CssLogo from "../assets/images/CSS3_logo.webp";
+import JsLogo from "../assets/images/JS_logo.webp";
+import SymfonyLogo from "../assets/images/Symfony_logo.webp";
+import LaravelLogo from "../assets/images/Laravel_logo.webp";
+import ReactLogo from "../assets/images/React_logo.webp";
+import JiraLogo from "../assets/images/Jira_logo.webp";
+import MySQL_Logo from "../assets/images/MySQL_logo.webp";
 import styled from "styled-components";
 
 const SkillContainer = styled.div`

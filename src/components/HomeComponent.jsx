@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import AnimatedText from "./AnimatedText";
 import MouseWheel from "./MouseWheel";
-import DeveloppementWebIllustration from "../assets/images/developpement-web-illustration.jpg";
+import DeveloppementWebIllustration from "../assets/images/developpement-web-illustration.webp";
 
 const HomeContainer = styled.div`
   display: flex;
