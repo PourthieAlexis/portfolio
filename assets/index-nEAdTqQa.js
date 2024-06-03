@@ -252,7 +252,6 @@ Error generating stack: `+t.message+`
   position: fixed;
   left: 0;
   top: 10%;
-  height: 8rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, 3rem);
@@ -261,10 +260,9 @@ Error generating stack: `+t.message+`
   z-index: 999;
 `,rs=Y.a`
   position: relative;
-  left: -7rem;
+  left: -14rem;
   display: flex;
-  animation: 1s anim-socialMedia ease-out;
-  width: 10rem;
+  width: 100%;
   height: 100%;
   justify-content: end;
   align-items: center;
@@ -273,15 +271,6 @@ Error generating stack: `+t.message+`
   gap: 2rem;
   padding-right: 1rem;
   color: white;
-
-  @keyframes anim-socialMedia {
-    from {
-      left: -14rem;
-    }
-    to {
-      left: -7rem;
-    }
-  }
 
   &:hover {
     left: 0;
@@ -294,7 +283,7 @@ Error generating stack: `+t.message+`
   background-color: grey;
 `,X_e=Y(rs)`
   background-color: #d66853;
-`,J_e=()=>L.jsxs(G_e,{children:[L.jsxs(Q_e,{href:"https://www.linkedin.com/in/alexis-pourthié-699b7a279",target:"_blank",rel:"noopener noreferrer",children:[L.jsx("p",{children:"LinkedIn"}),L.jsx("img",{src:U_e,alt:"Logo linkedIn",width:"32",height:"32"})]}),L.jsxs(Y_e,{href:"mailto:alexispourthie@gmail.com",children:[L.jsx("p",{children:"Mail"}),L.jsx(Na.MailOutline,{color:"white",title:"Mail",height:"2rem",width:"2rem"})]}),L.jsxs(K_e,{href:"tel:0678293326",children:[L.jsx("p",{children:"Téléphone"}),L.jsx(Na.CallOutline,{color:"white",title:"Téléphone",height:"2rem",width:"2rem"})]}),L.jsxs(X_e,{href:$_e,target:"_blank",rel:"noopener noreferrer",children:[L.jsx("p",{children:"CV"}),L.jsx(Na.PersonOutline,{color:"white",title:"CV",height:"2rem",width:"2rem"})]})]});var wx=new Map,xn=new WeakMap,xM=0,Z_e=void 0;function eye(r){return r?(xn.has(r)||(xM+=1,xn.set(r,xM.toString())),xn.get(r)):"0"}function tye(r){return Object.keys(r).sort().filter(a=>r[a]!==void 0).map(a=>`${a}_${a==="root"?eye(r.root):r[a]}`).toString()}function aye(r){let a=tye(r),i=wx.get(a);if(!i){const l=new Map;let o;const t=new IntersectionObserver(c=>{c.forEach(f=>{var s;const u=f.isIntersecting&&o.some(n=>f.intersectionRatio>=n);r.trackVisibility&&typeof f.isVisible>"u"&&(f.isVisible=u),(s=l.get(f.target))==null||s.forEach(n=>{n(u,f)})})},r);o=t.thresholds||(Array.isArray(r.threshold)?r.threshold:[r.threshold||0]),i={id:a,observer:t,elements:l},wx.set(a,i)}return i}function lye(r,a,i={},l=Z_e){if(typeof window.IntersectionObserver>"u"&&l!==void 0){const s=r.getBoundingClientRect();return a(l,{isIntersecting:l,target:r,intersectionRatio:typeof i.threshold=="number"?i.threshold:0,time:0,boundingClientRect:s,intersectionRect:s,rootBounds:s}),()=>{}}const{id:o,observer:t,elements:c}=aye(i);let f=c.get(r)||[];return c.has(r)||c.set(r,f),f.push(a),t.observe(r),function(){f.splice(f.indexOf(a),1),f.length===0&&(c.delete(r),t.unobserve(r)),c.size===0&&(t.disconnect(),wx.delete(o))}}function IP({threshold:r,delay:a,trackVisibility:i,rootMargin:l,root:o,triggerOnce:t,skip:c,initialInView:f,fallbackInView:s,onChange:u}={}){var n;const[e,_]=d.useState(null),b=d.useRef(),[x,k]=d.useState({inView:!!f,entry:void 0});b.current=u,d.useEffect(()=>{if(c||!e)return;let w;return w=lye(e,(E,M)=>{k({inView:E,entry:M}),b.current&&b.current(E,M),M.isIntersecting&&t&&w&&(w(),w=void 0)},{root:o,rootMargin:l,threshold:r,trackVisibility:i,delay:a},s),()=>{w&&w()}},[Array.isArray(r)?r.toString():r,e,o,l,t,c,i,s,a]);const S=(n=x.entry)==null?void 0:n.target,C=d.useRef();!e&&S&&!t&&!c&&C.current!==S&&(C.current=S,k({inView:!!f,entry:void 0}));const y=[_,x.inView,x.entry];return y.ref=y[0],y.inView=y[1],y.entry=y[2],y}const rye="/portfolio/assets/presentationImage-YMGAjtQq.webp",Wr={tablet:"768px",laptop:"1024px",desktop:"1200px"},nye=Y.section`
+`,J_e=()=>L.jsxs(G_e,{children:[L.jsxs(Q_e,{href:"https://www.linkedin.com/in/alexis-pourthié-699b7a279",target:"_blank",rel:"noopener noreferrer",children:[L.jsx("p",{children:"LinkedIn"}),L.jsx("img",{src:U_e,alt:"Logo linkedIn",width:"32",height:"32"})]}),L.jsxs(Y_e,{href:"mailto:alexispourthie@gmail.com",children:[L.jsx("p",{children:"alexispourthie@gmail.com"}),L.jsx(Na.MailOutline,{color:"white",title:"Mail",height:"2rem",width:"2rem"})]}),L.jsxs(K_e,{href:"tel:0678293326",children:[L.jsx("p",{children:"06.78.29.33.26"}),L.jsx(Na.CallOutline,{color:"white",title:"Téléphone",height:"2rem",width:"2rem"})]}),L.jsxs(X_e,{href:$_e,target:"_blank",rel:"noopener noreferrer",children:[L.jsx("p",{children:"CV"}),L.jsx(Na.PersonOutline,{color:"white",title:"CV",height:"2rem",width:"2rem"})]})]});var wx=new Map,xn=new WeakMap,xM=0,Z_e=void 0;function eye(r){return r?(xn.has(r)||(xM+=1,xn.set(r,xM.toString())),xn.get(r)):"0"}function tye(r){return Object.keys(r).sort().filter(a=>r[a]!==void 0).map(a=>`${a}_${a==="root"?eye(r.root):r[a]}`).toString()}function aye(r){let a=tye(r),i=wx.get(a);if(!i){const l=new Map;let o;const t=new IntersectionObserver(c=>{c.forEach(f=>{var s;const u=f.isIntersecting&&o.some(n=>f.intersectionRatio>=n);r.trackVisibility&&typeof f.isVisible>"u"&&(f.isVisible=u),(s=l.get(f.target))==null||s.forEach(n=>{n(u,f)})})},r);o=t.thresholds||(Array.isArray(r.threshold)?r.threshold:[r.threshold||0]),i={id:a,observer:t,elements:l},wx.set(a,i)}return i}function lye(r,a,i={},l=Z_e){if(typeof window.IntersectionObserver>"u"&&l!==void 0){const s=r.getBoundingClientRect();return a(l,{isIntersecting:l,target:r,intersectionRatio:typeof i.threshold=="number"?i.threshold:0,time:0,boundingClientRect:s,intersectionRect:s,rootBounds:s}),()=>{}}const{id:o,observer:t,elements:c}=aye(i);let f=c.get(r)||[];return c.has(r)||c.set(r,f),f.push(a),t.observe(r),function(){f.splice(f.indexOf(a),1),f.length===0&&(c.delete(r),t.unobserve(r)),c.size===0&&(t.disconnect(),wx.delete(o))}}function IP({threshold:r,delay:a,trackVisibility:i,rootMargin:l,root:o,triggerOnce:t,skip:c,initialInView:f,fallbackInView:s,onChange:u}={}){var n;const[e,_]=d.useState(null),b=d.useRef(),[x,k]=d.useState({inView:!!f,entry:void 0});b.current=u,d.useEffect(()=>{if(c||!e)return;let w;return w=lye(e,(E,M)=>{k({inView:E,entry:M}),b.current&&b.current(E,M),M.isIntersecting&&t&&w&&(w(),w=void 0)},{root:o,rootMargin:l,threshold:r,trackVisibility:i,delay:a},s),()=>{w&&w()}},[Array.isArray(r)?r.toString():r,e,o,l,t,c,i,s,a]);const S=(n=x.entry)==null?void 0:n.target,C=d.useRef();!e&&S&&!t&&!c&&C.current!==S&&(C.current=S,k({inView:!!f,entry:void 0}));const y=[_,x.inView,x.entry];return y.ref=y[0],y.inView=y[1],y.entry=y[2],y}const rye="/portfolio/assets/presentationImage-YMGAjtQq.webp",Wr={tablet:"768px",laptop:"1024px",desktop:"1200px"},nye=Y.section`
   position: relative;
   min-height: 100vh;
   height: auto;
@@ -344,20 +333,23 @@ Error generating stack: `+t.message+`
   align-items: center;
   border-top-right-radius: 1rem;
   padding: 1rem;
+  width: 100%;
 `,cye=Y.div`
   display: flex;
   animation: ${r=>r.isVisible?`anim-lineUp 3s ease-out ${r.delay}s forwards`:"none"};
   transition: transform 0.3s ease-in-out;
+  width: 100%;
 
   img {
     object-fit: contain;
-    width: auto;
     border-radius: 2rem;
     margin: auto;
+    height: fit-content;
+    width: fit-content;
   }
 `,EM=Y.p`
   font-size: x-large;
-`,fye=()=>{const[r,a]=IP({triggerOnce:!0});return L.jsxs(nye,{ref:r,children:[L.jsx(cye,{isVisible:a,delay:0,children:L.jsx("img",{src:rye,alt:"Image de presentation",height:"350"})}),L.jsxs(oye,{isVisible:a,delay:.3,children:[L.jsxs(iye,{isVisible:a,delay:.3,children:[L.jsx("h1",{children:"Présentation"}),L.jsx(sye,{})]}),L.jsxs(uye,{isVisible:a,delay:.6,children:[L.jsx(EM,{children:"Je suis un développeur passionné spécialisé dans le domaine du web. Avec plusieurs années d'expérience, j'ai acquis des compétences solides et une profonde passion pour la création de solutions web innovantes."}),L.jsx(EM,{children:"Mon parcours dans le développement m'a permis de travailler sur divers projets, allant de la conception de sites web à la mise en œuvre de fonctionnalités avancées. Je suis constamment motivé par le désir de perfectionner mes compétences et d'apporter une expertise professionnelle à chaque projet."})]})]})]})},dye={backgroundColorPrimary:"rgb(220 217 217)",backgroundColorSecondary:"white",textColor:"black"},hye={backgroundColorPrimary:"#212D40",backgroundColorSecondary:"#364156",textColor:"white"},vye="/portfolio/assets/covoitease-yWWGbfrQ.webp",gye=Y.div`
+`,fye=()=>{const[r,a]=IP({triggerOnce:!0});return L.jsxs(nye,{ref:r,children:[L.jsx(cye,{isVisible:a,delay:0,children:L.jsx("img",{src:rye,alt:"Image de presentation"})}),L.jsxs(oye,{isVisible:a,delay:.3,children:[L.jsxs(iye,{isVisible:a,delay:.3,children:[L.jsx("h1",{children:"Présentation"}),L.jsx(sye,{})]}),L.jsxs(uye,{isVisible:a,delay:.6,children:[L.jsx(EM,{children:"Je suis un développeur passionné spécialisé dans le domaine du web. Avec plusieurs années d'expérience, j'ai acquis des compétences solides et une profonde passion pour la création de solutions web innovantes."}),L.jsx(EM,{children:"Mon parcours dans le développement m'a permis de travailler sur divers projets, allant de la conception de sites web à la mise en œuvre de fonctionnalités avancées. Je suis constamment motivé par le désir de perfectionner mes compétences et d'apporter une expertise professionnelle à chaque projet."})]})]})]})},dye={backgroundColorPrimary:"rgb(220 217 217)",backgroundColorSecondary:"white",textColor:"black"},hye={backgroundColorPrimary:"#212D40",backgroundColorSecondary:"#364156",textColor:"white"},vye="/portfolio/assets/covoitease-yWWGbfrQ.webp",gye=Y.div`
   position: fixed;
   top: 50%;
   left: 50%;
