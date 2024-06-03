@@ -67,6 +67,7 @@ const PresentationWrapper = styled.div`
   align-items: center;
   border-top-right-radius: 1rem;
   padding: 1rem;
+  width: 100%;
 `;
 
 const ImageContainer = styled.div`
@@ -76,12 +77,14 @@ const ImageContainer = styled.div`
       ? `anim-lineUp 3s ease-out ${props.delay}s forwards`
       : "none"};
   transition: transform 0.3s ease-in-out;
+  width: 100%;
 
   img {
     object-fit: contain;
-    width: auto;
     border-radius: 2rem;
     margin: auto;
+    height: fit-content;
+    width: fit-content;
   }
 `;
 

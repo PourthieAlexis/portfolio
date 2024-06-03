@@ -9,7 +9,6 @@ const SocialMedia = styled.div`
   position: fixed;
   left: 0;
   top: 10%;
-  height: 8rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, 3rem);
@@ -20,10 +19,9 @@ const SocialMedia = styled.div`
 
 const Social = styled.a`
   position: relative;
-  left: -7rem;
+  left: -14rem;
   display: flex;
-  animation: 1s anim-socialMedia ease-out;
-  width: 10rem;
+  width: 100%;
   height: 100%;
   justify-content: end;
   align-items: center;
@@ -32,15 +30,6 @@ const Social = styled.a`
   gap: 2rem;
   padding-right: 1rem;
   color: white;
-
-  @keyframes anim-socialMedia {
-    from {
-      left: -14rem;
-    }
-    to {
-      left: -7rem;
-    }
-  }
 
   &:hover {
     left: 0;
@@ -75,7 +64,7 @@ const SocialMediaComponent = () => {
         <img src={linkedIn} alt="Logo linkedIn" width="32" height="32" />
       </LinkedinIcon>
       <MailIcon href="mailto:alexispourthie@gmail.com">
-        <p>Mail</p>
+        <p>alexispourthie@gmail.com</p>
         <MailOutline
           color={"white"}
           title={"Mail"}
@@ -84,7 +73,7 @@ const SocialMediaComponent = () => {
         />
       </MailIcon>
       <PhoneIcon href="tel:0678293326">
-        <p>Téléphone</p>
+        <p>06.78.29.33.26</p>
         <CallOutline
           color={"white"}
           title={"Téléphone"}

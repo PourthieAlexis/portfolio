@@ -17,18 +17,20 @@ const GlobalStyle = createGlobalStyle`
 @font-face {
   font-family: 'VinaSans-Regular';
   src: url(${VinaSansRegular}) format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'NovaSquare-Regular';
   src: url(${NovaSquareRegular}) format('truetype');
+  font-display: swap;
 
 }
 
 @font-face {
   font-family: 'KdamThmorPro-Regular';
   src: url(${KdamThmorProRegular}) format('truetype');
-
+  font-display: swap;
 }
 
   :root {
@@ -67,6 +69,8 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const Content = styled.div`
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 `;

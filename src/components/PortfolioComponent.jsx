@@ -46,7 +46,7 @@ const ButtonCard = styled.button`
   position: absolute;
   top: 12rem;
   cursor: pointer;
-  left: 5rem;
+  left: 6rem;
   border-radius: 1rem;
   border: 1px solid black;
   background-color: transparent;
@@ -147,7 +147,12 @@ const PortfolioComponent = () => {
                 key={project.id}
               >
                 <ImgContainer>
-                  <img src={project.image} alt={project.image} />
+                  <img
+                    src={project.image}
+                    alt={project.image}
+                    width="350"
+                    height="400"
+                  />
                 </ImgContainer>
                 <ButtonCard>Voir Projet</ButtonCard>
               </Card>
