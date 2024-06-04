@@ -275,10 +275,10 @@ Error generating stack: `+t.message+`
 
   @keyframes anim-socialMedia {
     from {
-      left: -14rem;
+      left: -20rem;
     }
     to {
-      left: -7rem;
+      left: -14rem;
     }
   }
 
