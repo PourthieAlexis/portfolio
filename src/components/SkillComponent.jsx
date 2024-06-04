@@ -12,7 +12,6 @@ import MySQL_Logo from "../assets/images/MySQL_logo.webp";
 import styled from "styled-components";
 
 const SkillContainer = styled.div`
-  height: 10rem;
   width: 100%;
   background-color: ${(props) => props.theme.backgroundColorPrimary};
   display: flex;
@@ -23,7 +22,7 @@ const SkillContainer = styled.div`
 `;
 
 const SkillWrapper = styled.div`
-  width: 50%;
+  width: 100%;
 `;
 
 const Image = styled.img`
@@ -32,6 +31,13 @@ const Image = styled.img`
   max-width: 100%;
   border-radius: 1rem;
   object-fit: contain;
+`;
+
+const Skill = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: ${(props) => props.theme.textColor};
 `;
 
 const skills = [
@@ -50,12 +56,22 @@ const SkillComponent = () => {
     accessibility: true,
     infinite: true,
     dots: true,
+    lazyLoad: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 2,
     autoplay: true,
     arrows: false,
     focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+        },
+      },
+    ],
   };
 
   return (
@@ -63,7 +79,12 @@ const SkillComponent = () => {
       <SkillWrapper>
         <Slider {...settings}>
           {skills.map((skill) => (
-            <Image key={skill.id} src={skill.logo} alt={skill.name} />
+            <>
+              <Skill>
+                <Image key={skill.id} src={skill.logo} alt={skill.name} />
+                <p>{skill.name}</p>
+              </Skill>
+            </>
           ))}
         </Slider>
       </SkillWrapper>

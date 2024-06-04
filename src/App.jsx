@@ -2,54 +2,58 @@ import HeaderComponent from "./components/HeaderComponent";
 import Home from "./components/HomeComponent";
 import SocialMedia from "./components/SocialMediaComponent";
 import PresentationComponent from "./components/PresentationComponent";
-import { useLightMode } from "./context/LightModeProvider";
-import { lightTheme, darkTheme } from "./assets/theme";
-import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 import PortfolioComponent from "./components/PortfolioComponent";
 import SkillComponent from "./components/SkillComponent";
 import ParticlesComponent from "./components/Particle";
 import Footer from "./components/Footer";
+import { useLightMode } from "./context/LightModeProvider";
+import { lightTheme, darkTheme } from "./assets/theme";
+import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
+
 import VinaSansRegular from "./assets/fonts/VinaSans-Regular.ttf";
 import NovaSquareRegular from "./assets/fonts/NovaSquare-Regular.ttf";
 import KdamThmorProRegular from "./assets/fonts/KdamThmorPro-Regular.ttf";
 
+const fonts = {
+  VinaSansRegular,
+  NovaSquareRegular,
+  KdamThmorProRegular,
+};
+
 const GlobalStyle = createGlobalStyle`
-@font-face {
-  font-family: 'VinaSans-Regular';
-  src: url(${VinaSansRegular}) format('truetype');
-  font-display: swap;
-}
+  @font-face {
+    font-family: 'VinaSans-Regular';
+    src: url(${fonts.VinaSansRegular}) format('truetype');
+    font-display: swap;
+  }
 
-@font-face {
-  font-family: 'NovaSquare-Regular';
-  src: url(${NovaSquareRegular}) format('truetype');
-  font-display: swap;
+  @font-face {
+    font-family: 'NovaSquare-Regular';
+    src: url(${fonts.NovaSquareRegular}) format('truetype');
+    font-display: swap;
+  }
 
-}
-
-@font-face {
-  font-family: 'KdamThmorPro-Regular';
-  src: url(${KdamThmorProRegular}) format('truetype');
-  font-display: swap;
-}
+  @font-face {
+    font-family: 'KdamThmorPro-Regular';
+    src: url(${fonts.KdamThmorProRegular}) format('truetype');
+    font-display: swap;
+  }
 
   :root {
-    --dark-background-color: ${(props) => props.theme.backgroundColorPrimary};
-    --light-background-color: ${(props) => props.theme.backgroundColorPrimary};
+    --background-color: ${(props) => props.theme.backgroundColorPrimary};
     --primary-color: #212D40;
-    --dark-text-color: ${(props) => props.theme.textColor};
-    --light-text-color: ${(props) => props.theme.textColor};
+    --text-color: ${(props) => props.theme.textColor};
     --font-family: 'KdamThmorPro-Regular', sans-serif;
-    --font-familyText: 'NovaSquare-Regular', sans-serif;
+    --font-family-text: 'NovaSquare-Regular', sans-serif;
   }
 
   body {
     margin: 0;
     padding: 0;
     font-family: var(--font-family);
-}
+  }
 
-@keyframes anim-lineUp {
+  @keyframes anim-lineUp {
     0% {
       opacity: 0;
       transform: translateY(80%);

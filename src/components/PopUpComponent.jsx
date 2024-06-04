@@ -8,8 +8,7 @@ const PopupContainer = styled.div`
   top: 50%;
   left: 50%;
   width: 80%;
-  min-width: fit-content;
-  justify-content: center;
+  justify-content: space-around;
   height: 30rem;
   border-radius: 2rem;
   padding: 3rem;
@@ -25,9 +24,10 @@ const PopupContainer = styled.div`
       animation: popupAnimation 0.75s cubic-bezier(0.53, -0.08, 0.5, 1.43);
     `}
 
-  @media (max-width: 1024px) {
+  @media (max-width: ${breakpoints.laptop}) {
     height: auto;
     flex-direction: column;
+    width: fit-content;
   }
 
   @keyframes popupAnimation {
@@ -43,7 +43,7 @@ const PopupContainer = styled.div`
 `;
 
 const ImgContainer = styled.div`
-  width: 70%;
+  width: 50%;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -74,7 +74,6 @@ const Content = styled.div`
   gap: 2rem;
   @media (max-width: ${breakpoints.laptop}) {
     width: 100%;
-    flex-direction: row;
   }
 `;
 

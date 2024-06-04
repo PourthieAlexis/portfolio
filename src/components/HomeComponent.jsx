@@ -2,10 +2,11 @@ import styled from "styled-components";
 import AnimatedText from "./AnimatedText";
 import MouseWheel from "./MouseWheel";
 import DeveloppementWebIllustration from "../assets/images/developpement-web-illustration.webp";
+import breakpoints from "../assets/breakpoints";
 
 const HomeContainer = styled.div`
   display: flex;
-  padding: 5rem;
+  padding: 3rem;
   box-sizing: border-box;
   height: 100vh;
   width: 100%;
@@ -19,12 +20,17 @@ const TitleContainer = styled.div`
   display: flex;
   align-self: center;
   flex-direction: column;
-  font-size: xx-large;
   text-align: center;
+  margin-left: 8rem;
+  font-size: xx-large;
   animation: 3s anim-lineUp ease-out;
+  width: 28rem;
+  @media (max-width: ${breakpoints.tablet}) {
+    margin: 0;
+  }
 `;
 
-const P = styled.p`
+const Text = styled.p`
   margin: 0;
   align-self: start;
   justify-content: start;
@@ -40,7 +46,7 @@ const Home = () => {
   return (
     <HomeContainer>
       <TitleContainer>
-        <P>Bonjour, je suis</P>
+        <Text>Bonjour, je suis</Text>
         <Title>Alexis Pourthié</Title>
         <AnimatedText>Développeur Web</AnimatedText>
       </TitleContainer>

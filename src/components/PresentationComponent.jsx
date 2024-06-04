@@ -84,7 +84,8 @@ const ImageContainer = styled.div`
     border-radius: 2rem;
     margin: auto;
     height: fit-content;
-    width: fit-content;
+    width: 100%;
+    max-width: fit-content;
   }
 `;
 

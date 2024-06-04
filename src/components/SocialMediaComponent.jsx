@@ -1,6 +1,4 @@
-import { MailOutline } from "react-ionicons";
-import { CallOutline } from "react-ionicons";
-import { PersonOutline } from "react-ionicons";
+import { MailOutline, CallOutline, PersonOutline } from "react-ionicons/lib";
 import styled from "styled-components";
 import linkedIn from "../assets/images/Linkedin_logo.webp";
 import CV from "../assets/CV/Alexis_Pourthié_CV.pdf";
@@ -25,6 +23,7 @@ const Social = styled.a`
   height: 100%;
   justify-content: end;
   align-items: center;
+  text-decoration: none;
   animation: 1s anim-socialMedia ease-out;
   cursor: pointer;
   transition: left 1s ease;
@@ -34,10 +33,10 @@ const Social = styled.a`
 
   @keyframes anim-socialMedia {
     from {
-      left: -14rem;
+      left: -20rem;
     }
     to {
-      left: -7rem;
+      left: -14rem;
     }
   }
 

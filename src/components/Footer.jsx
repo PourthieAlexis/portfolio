@@ -1,4 +1,4 @@
-import { CallOutline, MailOutline } from "react-ionicons";
+import { CallOutline, MailOutline } from "react-ionicons/lib";
 import styled from "styled-components";
 
 const FooterContainer = styled.footer`
@@ -53,7 +53,7 @@ const Footer = () => {
       <ContactInfo>
         <ContactTitle>Me contacter</ContactTitle>
         <ContactText>
-          Vous pouvez me contacter avec les réseaux socieaux suivants
+          Vous pouvez me contacter par mail ou par téléphone
         </ContactText>
       </ContactInfo>
       <SocialIcons>

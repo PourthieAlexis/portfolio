@@ -54,21 +54,23 @@ const ButtonCard = styled.button`
 `;
 
 const Card = styled.div`
+  background: ${(props) => props.theme.backgroundColorPrimary};
   position: relative;
   min-width: 20rem;
   height: 15rem;
   border: 1px solid black;
   cursor: pointer;
-  box-shadow: 1rem 1rem 0px 0px ${(props) => props.theme.backgroundColorPrimary};
+  box-shadow: 0.5rem 0.5rem 0px 0px
+    ${(props) => props.theme.backgroundColorPrimary};
   border-radius: 1rem;
   opacity: 0;
   bottom: 0;
   overflow: hidden;
-  transition: bottom 0.3s ease, box-shadow 0.3s ease;
+  transition: bottom 0.2s ease, box-shadow 0.2s ease;
 
   &:hover {
-    bottom: 2rem;
-    box-shadow: 1rem 2rem 0px 0px
+    bottom: 0rem;
+    box-shadow: 0.5rem 1.5rem 0px 0px
       ${(props) => props.theme.backgroundColorPrimary};
     ${ButtonCard} {
       opacity: 1;
@@ -121,7 +123,7 @@ const PortfolioComponent = () => {
         "Github",
         "Gitlab",
       ],
-      delay: 0.5,
+      delay: 0.3,
     },
   ];
 

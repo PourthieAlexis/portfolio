@@ -1,4 +1,4 @@
-import { InvertModeOutline } from "react-ionicons";
+import { InvertModeOutline } from "react-ionicons/lib";
 import { useLightMode } from "../context/LightModeProvider";
 import styled from "styled-components";
 
