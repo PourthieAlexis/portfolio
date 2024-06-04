@@ -181,7 +181,7 @@ Error generating stack: `+t.message+`
   align-items: center;
   gap: 2rem;
   animation: 3s anim-lineUp ease-out;
-`,R_e=()=>{const{isLightMode:r,toggleLightMode:a}=jP();return L.jsxs(L_e,{children:[L.jsx("div",{className:"logo"}),L.jsx(z_e,{children:L.jsx(N_e,{onClick:()=>a(),isLightMode:r,children:L.jsx(Na.InvertModeOutline,{color:"#FFF3BC",height:"2rem",width:"2rem"})})})]})},B_e=Y.div`
+`,R_e=()=>{const{isLightMode:r,toggleLightMode:a}=jP();return L.jsxs(L_e,{children:[L.jsx("div",{className:"logo"}),L.jsx(z_e,{children:L.jsx(N_e,{onClick:()=>a(),isLightMode:r,"aria-label":"Switch theme",children:L.jsx(Na.InvertModeOutline,{color:"#FFF3BC",height:"2rem",width:"2rem"})})})]})},B_e=Y.div`
   height: 3rem;
   overflow: hidden;
   margin: 0;
