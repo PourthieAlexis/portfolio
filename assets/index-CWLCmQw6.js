@@ -228,7 +228,6 @@ Error generating stack: `+t.message+`
   padding: 5rem;
   box-sizing: border-box;
   height: 100vh;
-  width: 100%;
   background: url(${V_e});
   background-size: cover;
   background-position: 100%;
@@ -240,6 +239,7 @@ Error generating stack: `+t.message+`
   font-size: xx-large;
   text-align: center;
   animation: 3s anim-lineUp ease-out;
+  width: 19rem;
 `,j_e=Y.p`
   margin: 0;
   align-self: start;
@@ -364,7 +364,6 @@ Error generating stack: `+t.message+`
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 80%;
   min-width: fit-content;
   justify-content: center;
   height: 30rem;
@@ -425,7 +424,6 @@ Error generating stack: `+t.message+`
   gap: 2rem;
   @media (max-width: ${Wr.laptop}) {
     width: 100%;
-    flex-direction: row;
   }
 `,_ye=Y.div`
   h2 {
