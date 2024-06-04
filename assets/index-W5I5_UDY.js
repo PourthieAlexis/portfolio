@@ -588,7 +588,7 @@ Error generating stack: `+t.message+`
       align-items: center;
     }
   }
-`,oSe=()=>L.jsxs(rSe,{children:[L.jsxs(nSe,{children:[L.jsx(iSe,{children:"Me contacter"}),L.jsx(sSe,{children:"Vous pouvez me contacter avec les réseaux socieaux suivants"})]}),L.jsxs(uSe,{children:[L.jsxs("p",{children:[L.jsx(Na.MailOutline,{title:"Mail",height:"2rem",width:"2rem"}),"alexispourthie@gmail.com"]}),L.jsxs("p",{children:[L.jsx(Na.CallOutline,{title:"Phone",height:"2rem",width:"2rem"}),"06.78.29.33.26"]})]})]}),cSe={backgroundColorPrimary:"rgb(220 217 217)",backgroundColorSecondary:"white",textColor:"black"},fSe={backgroundColorPrimary:"#212D40",backgroundColorSecondary:"#364156",textColor:"white"},vu={VinaSansRegular:require("./assets/fonts/VinaSans-Regular.ttf"),NovaSquareRegular:require("./assets/fonts/NovaSquare-Regular.ttf"),KdamThmorProRegular:require("./assets/fonts/KdamThmorPro-Regular.ttf")},dSe=VP`
+`,oSe=()=>L.jsxs(rSe,{children:[L.jsxs(nSe,{children:[L.jsx(iSe,{children:"Me contacter"}),L.jsx(sSe,{children:"Vous pouvez me contacter avec les réseaux socieaux suivants"})]}),L.jsxs(uSe,{children:[L.jsxs("p",{children:[L.jsx(Na.MailOutline,{title:"Mail",height:"2rem",width:"2rem"}),"alexispourthie@gmail.com"]}),L.jsxs("p",{children:[L.jsx(Na.CallOutline,{title:"Phone",height:"2rem",width:"2rem"}),"06.78.29.33.26"]})]})]}),cSe={backgroundColorPrimary:"rgb(220 217 217)",backgroundColorSecondary:"white",textColor:"black"},fSe={backgroundColorPrimary:"#212D40",backgroundColorSecondary:"#364156",textColor:"white"},dSe="/portfolio/assets/VinaSans-Regular-LjK2WFzW.ttf",hSe="/portfolio/assets/NovaSquare-Regular-gVr2GeG6.ttf",vSe="/portfolio/assets/KdamThmorPro-Regular-sdo02gUH.ttf",vu={VinaSansRegular:dSe,NovaSquareRegular:hSe,KdamThmorProRegular:vSe},gSe=VP`
   @font-face {
     font-family: 'VinaSans-Regular';
     src: url(${vu.VinaSansRegular}) format('truetype');
@@ -638,14 +638,14 @@ Error generating stack: `+t.message+`
       opacity: 1;
     }
   }
-`,hSe=Y.div`
+`,mSe=Y.div`
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
-`,vSe=Y.main`
+`,_Se=Y.main`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`;function gSe(){const{isLightMode:r}=jP(),a=r?cSe:fSe;return L.jsxs(HP,{theme:a,children:[L.jsx(dSe,{}),L.jsx(lSe,{}),L.jsxs(hSe,{children:[L.jsx(R_e,{}),L.jsxs(vSe,{children:[L.jsx(Z_e,{}),L.jsx(U_e,{}),L.jsx(dye,{}),L.jsx(Hke,{}),L.jsx(Oye,{})]}),L.jsx(oSe,{})]})]})}gu.createRoot(document.getElementById("root")).render(L.jsx(et.StrictMode,{children:L.jsx(T_e,{children:L.jsx(gSe,{})})}));
+`;function ySe(){const{isLightMode:r}=jP(),a=r?cSe:fSe;return L.jsxs(HP,{theme:a,children:[L.jsx(gSe,{}),L.jsx(lSe,{}),L.jsxs(mSe,{children:[L.jsx(R_e,{}),L.jsxs(_Se,{children:[L.jsx(Z_e,{}),L.jsx(U_e,{}),L.jsx(dye,{}),L.jsx(Hke,{}),L.jsx(Oye,{})]}),L.jsx(oSe,{})]})]})}gu.createRoot(document.getElementById("root")).render(L.jsx(et.StrictMode,{children:L.jsx(T_e,{children:L.jsx(ySe,{})})}));
