@@ -43,6 +43,7 @@ const HeaderComponent = () => {
         <ThemeModeToggle
           onClick={() => toggleLightMode()}
           isLightMode={isLightMode}
+          aria-label="Switch theme"
         >
           <InvertModeOutline color={"#FFF3BC"} height="2rem" width="2rem" />
         </ThemeModeToggle>
