@@ -2,12 +2,13 @@ import PropTypes from "prop-types";
 import styled, { css } from "styled-components";
 import { CloseOutline } from "react-ionicons";
 import breakpoints from "../assets/breakpoints";
+import { useEffect } from "react";
 
 const PopupContainer = styled.div`
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 80%;
+  width: 60%;
   justify-content: space-around;
   height: 30rem;
   border-radius: 2rem;
@@ -21,7 +22,7 @@ const PopupContainer = styled.div`
   ${(props) =>
     props.visible &&
     css`
-      animation: popupAnimation 0.75s cubic-bezier(0.53, -0.08, 0.5, 1.43);
+      animation: popupAnimation 0.25s cubic-bezier(0.53, -0.08, 0.5, 1.43);
     `}
 
   @media (max-width: ${breakpoints.laptop}) {
@@ -119,6 +120,22 @@ const Overlay = styled.div`
 `;
 
 const Popup = ({ onClose, visible, projet }) => {
+  useEffect(() => {
+    if (visible) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [visible]);
+
+  if (!visible) {
+    return null;
+  }
+
   return (
     <>
       <Overlay onClick={onClose} />

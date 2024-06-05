@@ -2,6 +2,7 @@ import { MailOutline, CallOutline, PersonOutline } from "react-ionicons/lib";
 import styled from "styled-components";
 import linkedIn from "../assets/images/Linkedin_logo.webp";
 import CV from "../assets/CV/Alexis_Pourthié_CV.pdf";
+import breakpoints from "../assets/breakpoints";
 
 const SocialMedia = styled.div`
   position: fixed;
@@ -13,6 +14,9 @@ const SocialMedia = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 999;
+  @media (max-width: ${breakpoints.laptop}) {
+    display: none;
+  }
 `;
 
 const Social = styled.a`

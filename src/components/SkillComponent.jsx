@@ -10,6 +10,7 @@ import ReactLogo from "../assets/images/React_logo.webp";
 import JiraLogo from "../assets/images/Jira_logo.webp";
 import MySQL_Logo from "../assets/images/MySQL_logo.webp";
 import styled from "styled-components";
+import React from "react";
 
 const SkillContainer = styled.div`
   width: 100%;
@@ -79,12 +80,12 @@ const SkillComponent = () => {
       <SkillWrapper>
         <Slider {...settings}>
           {skills.map((skill) => (
-            <>
+            <React.Fragment key={skill.id}>
               <Skill>
-                <Image key={skill.id} src={skill.logo} alt={skill.name} />
+                <Image src={skill.logo} alt={skill.name} />
                 <p>{skill.name}</p>
               </Skill>
-            </>
+            </React.Fragment>
           ))}
         </Slider>
       </SkillWrapper>
