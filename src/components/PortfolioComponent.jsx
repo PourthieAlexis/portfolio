@@ -3,7 +3,10 @@ import styled from "styled-components";
 import Covoitease from "../assets/images/covoitease.webp";
 import { useState } from "react";
 import Popup from "./PopUpComponent";
-import UBNI_logo from "../assets/images/UBNI_logo.webp";
+import UBNI_Logo from "../assets/images/UBNI_logo.webp";
+import ChatApp from "../assets/images/chat_app.webp";
+import BrandChecker from "../assets/images/brand_checker.webp";
+import ArtShop from "../assets/images/Art_Shop_Logo.webp";
 
 const PortfolioContainer = styled.div`
   min-height: 100vh;
@@ -39,20 +42,6 @@ const CardContainer = styled.div`
   gap: 2rem;
 `;
 
-const ButtonCard = styled.button`
-  width: 10rem;
-  opacity: 0;
-  height: 2rem;
-  position: absolute;
-  top: 12rem;
-  cursor: pointer;
-  left: 6rem;
-  border-radius: 1rem;
-  border: 1px solid black;
-  background-color: transparent;
-  color: ${(props) => props.theme.textColor};
-`;
-
 const Card = styled.div`
   background: ${(props) => props.theme.backgroundColorPrimary};
   position: relative;
@@ -72,9 +61,6 @@ const Card = styled.div`
     bottom: 0rem;
     box-shadow: 0.5rem 1.5rem 0px 0px
       ${(props) => props.theme.backgroundColorPrimary};
-    ${ButtonCard} {
-      opacity: 1;
-    }
   }
 
   animation: ${(props) =>
@@ -106,24 +92,39 @@ const PortfolioComponent = () => {
 
   const projects = [
     {
-      id: "0",
-      text: "Covoitease est un projet de covoiturage avec accès au personne à mobilité réduite, j'ai effectué ce projet dans une équipe agile à l'incubateur de Euratechnologies",
+      id: "1",
+      text: "Covoitease est un projet de covoiturage avec accès au personne à mobilité réduite, j'ai effectué ce projet dans une équipe agile à l'incubateur de Euratechnologies.",
       image: Covoitease,
-      techno: ["Symfony API", "React", "MySQL", "Github", "Jira"],
+      techno: ["Symfony API", "React", "MySQL", "Jira"],
       delay: 0,
     },
     {
-      id: "1",
-      text: "Joukemy est une application mobile qui permet de parier sur des matchs e-sport avec ses amis en utilisant un système de point. J'ai effectué ce projet pendant mon stage chez UBNI",
-      image: UBNI_logo,
-      techno: [
-        "Laravel API",
-        "React Native",
-        "PostegreSQL",
-        "Github",
-        "Gitlab",
-      ],
+      id: "2",
+      text: "Joukemy est une application mobile qui permet de parier sur des matchs e-sport avec ses amis en utilisant un système de point. J'ai effectué ce projet pendant mon stage chez UBNI.",
+      image: UBNI_Logo,
+      techno: ["Laravel API", "React Native", "PostegreSQL"],
       delay: 0.3,
+    },
+    {
+      id: "3",
+      text: "L'application BrandChecker permet de vérifier la disponibilité des noms de domaine avec différentes extensions. Elle utilise les Server-Sent Events (SSE) pour fournir des mises à jour en temps réel sur la disponibilité des noms de domaine.",
+      image: BrandChecker,
+      techno: ["Nuxt", "Server-Sent-Events", "Drizzle ORM", "SQLite"],
+      delay: 0.6,
+    },
+    {
+      id: "4",
+      text: "ArtShop est une application web basée sur Symfony et React, créée pour la vente d'œuvres d'art en ligne. L'application offre une expérience utilisateur intuitive pour explorer, acheter et interagir avec différentes œuvres d'art.",
+      image: ArtShop,
+      techno: ["Symfony", "React", "React-Query", "Docker"],
+      delay: 0.9,
+    },
+    {
+      id: "5",
+      text: "Cette application de chat permet aux utilisateurs de s'inscrire, de se connecter, de discuter en privé avec d'autres utilisateurs, ainsi que de participer à des discussions publiques. L'application est construite avec Spring Boot pour le backend et Angular pour le frontend.",
+      image: ChatApp,
+      techno: ["Spring Boot", "Angular", "WebSocket"],
+      delay: 1.2,
     },
   ];
 
@@ -156,7 +157,6 @@ const PortfolioComponent = () => {
                     height="400"
                   />
                 </ImgContainer>
-                <ButtonCard>Voir Projet</ButtonCard>
               </Card>
             );
           })}

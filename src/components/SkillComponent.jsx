@@ -1,8 +1,9 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import HtmlLogo from "../assets/images/HTML5_logo.webp";
-import CssLogo from "../assets/images/CSS3_logo.webp";
+import AngularLogo from "../assets/images/Angular_logo.webp";
+import SpringBoot from "../assets/images/SpringBoot_logo.webp";
+import DockerLogo from "../assets/images/Docker_logo.webp";
 import JsLogo from "../assets/images/JS_logo.webp";
 import SymfonyLogo from "../assets/images/Symfony_logo.webp";
 import LaravelLogo from "../assets/images/Laravel_logo.webp";
@@ -42,14 +43,15 @@ const Skill = styled.div`
 `;
 
 const skills = [
-  { id: 1, logo: HtmlLogo, name: "HTML5" },
-  { id: 2, logo: CssLogo, name: "CSS3" },
+  { id: 1, logo: SpringBoot, name: "Spring Boot" },
+  { id: 2, logo: AngularLogo, name: "Angular" },
   { id: 3, logo: JsLogo, name: "JavaScript" },
   { id: 4, logo: SymfonyLogo, name: "Symfony" },
   { id: 5, logo: ReactLogo, name: "React" },
   { id: 6, logo: LaravelLogo, name: "Laravel" },
   { id: 7, logo: JiraLogo, name: "Jira" },
   { id: 8, logo: MySQL_Logo, name: "MySQL" },
+  { id: 8, logo: DockerLogo, name: "Docker" },
 ];
 
 const SkillComponent = () => {
