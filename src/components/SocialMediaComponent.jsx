@@ -1,6 +1,7 @@
 import { MailOutline, CallOutline, PersonOutline } from "react-ionicons/lib";
 import styled from "styled-components";
 import linkedIn from "../assets/images/Linkedin_logo.webp";
+import githubLogo from "../assets/images/Github_Logo.webp";
 import CV from "../assets/CV/Alexis_Pourthié_CV.pdf";
 import breakpoints from "../assets/breakpoints";
 
@@ -65,6 +66,10 @@ const ResumeIcon = styled(Social)`
   background-color: #d66853;
 `;
 
+const GithubIcon = styled(Social)`
+  background-color: #1b1f23;
+`;
+
 const SocialMediaComponent = () => {
   return (
     <SocialMedia>
@@ -103,6 +108,14 @@ const SocialMediaComponent = () => {
           width="2rem"
         />
       </ResumeIcon>
+      <GithubIcon
+        href="https://github.com/PourthieAlexis"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <p>Github</p>
+        <img src={githubLogo} alt="Logo github" width="32" height="32" />
+      </GithubIcon>
     </SocialMedia>
   );
 };

@@ -17,7 +17,6 @@ const PresentationContainer = styled.section`
   display: flex;
   justify-content: space-evenly;
   overflow: hidden;
-  gap: 2rem;
 
   @media (max-width: ${breakpoints.laptop}) {
     flex-wrap: wrap;
@@ -25,7 +24,7 @@ const PresentationContainer = styled.section`
 `;
 
 const Title = styled.div`
-  position: absolute;
+  position: relative;
   font-size: xx-large;
   text-align: center;
   opacity: 0;
@@ -42,7 +41,7 @@ const Title = styled.div`
 `;
 
 const Hr = styled.hr`
-  margin-bottom: 3rem;
+  margin-bottom: 0;
 `;
 
 const TextContainer = styled.div`
@@ -50,7 +49,6 @@ const TextContainer = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   opacity: 0;
   font-family: var(--font-familyText);
   animation: ${(props) =>
@@ -91,6 +89,7 @@ const ImageContainer = styled.div`
 
 const Text = styled.p`
   font-size: x-large;
+  line-height: 2rem;
 `;
 
 const PresentationComponent = () => {
@@ -109,18 +108,25 @@ const PresentationComponent = () => {
           <Hr />
         </Title>
         <TextContainer isVisible={inView} delay={0.6}>
+          <Text>Bonjour et bienvenue sur mon portfolio</Text>
           <Text>
-            Je suis un développeur passionné spécialisé dans le domaine du web.
-            Avec plusieurs années d&apos;expérience, j&apos;ai acquis des
-            compétences solides et une profonde passion pour la création de
-            solutions web innovantes.
+            Je m’appelle Alexis Pourthié, développeur web passionné de 23 ans.
+            J'adore créer des applications web et j'aime toucher à tout en
+            termes de technologies J'apprécie explorer et maîtriser diverses
+            plateformes et frameworks pour offrir des solutions innovantes et
+            performantes.
           </Text>
           <Text>
-            Mon parcours dans le développement m&apos;a permis de travailler sur
-            divers projets, allant de la conception de sites web à la mise en
-            œuvre de fonctionnalités avancées. Je suis constamment motivé par le
-            désir de perfectionner mes compétences et d&apos;apporter une
-            expertise professionnelle à chaque projet.
+            Mon parcours m'a permis d'acquérir une expertise variée et de
+            travailler sur de nombreux projets, chacun apportant son lot de
+            défis et d'apprentissages. Cette polyvalence me permet de m'adapter
+            rapidement aux nouvelles technologies.
+          </Text>
+          <Text>
+            N'hésitez pas à explorer mon portfolio pour en savoir plus sur mes
+            projets et mes expériences. Je suis toujours ouvert à de nouvelles
+            opportunités et collaborations. Hâte de pouvoir en discuter avec
+            vous !
           </Text>
         </TextContainer>
       </PresentationWrapper>

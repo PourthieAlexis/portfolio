@@ -24,7 +24,7 @@ const TitleContainer = styled.div`
   margin-left: 8rem;
   font-size: xx-large;
   animation: 3s anim-lineUp ease-out;
-  width: 28rem;
+  width: 30rem;
   @media (max-width: ${breakpoints.tablet}) {
     margin: 0;
   }

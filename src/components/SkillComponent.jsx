@@ -1,6 +1,9 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import styled from "styled-components";
+import React from "react";
+
 import AngularLogo from "../assets/images/Angular_logo.webp";
 import SpringBoot from "../assets/images/SpringBoot_logo.webp";
 import DockerLogo from "../assets/images/Docker_logo.webp";
@@ -10,8 +13,7 @@ import LaravelLogo from "../assets/images/Laravel_logo.webp";
 import ReactLogo from "../assets/images/React_logo.webp";
 import JiraLogo from "../assets/images/Jira_logo.webp";
 import MySQL_Logo from "../assets/images/MySQL_logo.webp";
-import styled from "styled-components";
-import React from "react";
+import NuxtLogo from "../assets/images/Nuxt_logo.webp";
 
 const SkillContainer = styled.div`
   width: 100%;
@@ -51,7 +53,8 @@ const skills = [
   { id: 6, logo: LaravelLogo, name: "Laravel" },
   { id: 7, logo: JiraLogo, name: "Jira" },
   { id: 8, logo: MySQL_Logo, name: "MySQL" },
-  { id: 8, logo: DockerLogo, name: "Docker" },
+  { id: 9, logo: DockerLogo, name: "Docker" },
+  { id: 10, logo: NuxtLogo, name: "Nuxt" },
 ];
 
 const SkillComponent = () => {
