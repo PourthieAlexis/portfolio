@@ -110,9 +110,9 @@ const PresentationComponent = () => {
         <TextContainer isVisible={inView} delay={0.6}>
           <Text>Bonjour et bienvenue sur mon portfolio</Text>
           <Text>
-            Je m’appelle Alexis Pourthié, développeur web passionné de 23 ans.
+            Je m'appelle Alexis Pourthié, développeur web passionné de 23 ans.
             J'adore créer des applications web et j'aime toucher à tout en
-            termes de technologies J'apprécie explorer et maîtriser diverses
+            termes de technologies. J'apprécie explorer et maîtriser diverses
             plateformes et frameworks pour offrir des solutions innovantes et
             performantes.
           </Text>
