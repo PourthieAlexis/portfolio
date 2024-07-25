@@ -10,32 +10,24 @@ import { useLightMode } from "./context/LightModeProvider";
 import { lightTheme, darkTheme } from "./assets/theme";
 import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 
-import VinaSansRegular from "./assets/fonts/VinaSans-Regular.ttf";
-import NovaSquareRegular from "./assets/fonts/NovaSquare-Regular.ttf";
-import KdamThmorProRegular from "./assets/fonts/KdamThmorPro-Regular.ttf";
+import Helvetica from "./assets/fonts/Helvetica.ttf";
+import KdamThmorPro from "./assets/fonts/KdamThmorPro-Regular.ttf";
 
 const fonts = {
-  VinaSansRegular,
-  NovaSquareRegular,
-  KdamThmorProRegular,
+  Helvetica,
+  KdamThmorPro,
 };
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
-    font-family: 'VinaSans-Regular';
-    src: url(${fonts.VinaSansRegular}) format('truetype');
+    font-family: 'Helvetica';
+    src: url(${fonts.Helvetica}) format('truetype');
     font-display: swap;
   }
 
   @font-face {
-    font-family: 'NovaSquare-Regular';
-    src: url(${fonts.NovaSquareRegular}) format('truetype');
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: 'KdamThmorPro-Regular';
-    src: url(${fonts.KdamThmorProRegular}) format('truetype');
+    font-family: 'KdamThmorPro';
+    src: url(${fonts.KdamThmorPro}) format('truetype');
     font-display: swap;
   }
 
@@ -43,8 +35,8 @@ const GlobalStyle = createGlobalStyle`
     --background-color: ${(props) => props.theme.backgroundColorPrimary};
     --primary-color: #212D40;
     --text-color: ${(props) => props.theme.textColor};
-    --font-family: 'KdamThmorPro-Regular', sans-serif;
-    --font-family-text: 'NovaSquare-Regular', sans-serif;
+    --font-family: 'Helvetica', sans-serif;
+    --font-family-title: 'KdamThmorPro', sans-serif;
   }
 
   body {
@@ -95,7 +87,7 @@ function App() {
       <GlobalStyle />
       <ParticlesComponent />
       <Content>
-        <HeaderComponent />
+        {/* <HeaderComponent />*/}
         <Main>
           <SocialMedia />
           <Home />

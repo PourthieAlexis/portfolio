@@ -1,12 +1,12 @@
 import { useInView } from "react-intersection-observer";
 import styled from "styled-components";
-import Covoitease from "../assets/images/covoitease.webp";
 import { useState } from "react";
-import Popup from "./PopUpComponent";
+import Covoitease from "../assets/images/covoitease.webp";
 import UBNI_Logo from "../assets/images/UBNI_logo.webp";
 import ChatApp from "../assets/images/chat_app.webp";
 import BrandChecker from "../assets/images/brand_checker.webp";
 import ArtShop from "../assets/images/Art_Shop_Logo.webp";
+import breakpoints from "../assets/breakpoints";
 
 const PortfolioContainer = styled.div`
   min-height: 100vh;
@@ -22,6 +22,7 @@ const PortfolioContainer = styled.div`
 `;
 
 const Title = styled.div`
+  font-family: var(--font-family-title);
   font-size: xx-large;
   text-align: center;
   animation: ${(props) =>
@@ -34,33 +35,50 @@ const Hr = styled.hr`
 `;
 
 const CardContainer = styled.div`
-  height: 100%;
   display: flex;
-  justify-content: center;
-  margin: 2rem;
   flex-wrap: wrap;
-  gap: 2rem;
+  justify-content: space-around;
+  margin: 2rem;
+  width: 70%;
+  margin: auto;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Card = styled.div`
   background: ${(props) => props.theme.backgroundColorPrimary};
   position: relative;
-  min-width: 20rem;
-  height: 15rem;
+  width: 35%;
+  margin: 2rem;
   border: 1px solid black;
+  opacity: 0;
+  min-height: 17rem;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   cursor: pointer;
   box-shadow: 0.5rem 0.5rem 0px 0px
     ${(props) => props.theme.backgroundColorPrimary};
-  border-radius: 1rem;
-  opacity: 0;
-  bottom: 0;
+  border-radius: 4px;
   overflow: hidden;
-  transition: bottom 0.2s ease, box-shadow 0.2s ease;
+  transition: box-shadow 0.3s ease;
 
   &:hover {
-    bottom: 0rem;
     box-shadow: 0.5rem 1.5rem 0px 0px
       ${(props) => props.theme.backgroundColorPrimary};
+  }
+
+  @media (max-width: ${breakpoints.desktop}) {
+    width: 80%;
+    margin: 1rem 0;
   }
 
   animation: ${(props) =>
@@ -70,16 +88,27 @@ const Card = styled.div`
 `;
 
 const ImgContainer = styled.div`
-  width: 100%;
-  height: 100%;
+  margin: 1rem;
   display: flex;
-  place-content: center;
+  justify-content: center;
+  align-items: center;
 
   img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: ${(props) => (props.expanded ? "40%" : "50%")};
     object-fit: contain;
+    transition: max-width 0.5s ease;
   }
+`;
+
+const ProjectInfo = styled.div`
+  padding: 1rem;
+  color: ${(props) => props.theme.textColor};
+  opacity: ${(props) => (props.expanded ? 1 : 0)};
+  max-height: ${(props) => (props.expanded ? "16rem" : "0")};
+  overflow: hidden;
+  visibility: ${(props) => (props.expanded ? "visible" : "hidden")};
+  position: ${(props) => (props.expanded ? "static" : "absolute")};
+  transition: max-height 0.5s ease, opacity 0.5s ease;
 `;
 
 const PortfolioComponent = () => {
@@ -87,8 +116,8 @@ const PortfolioComponent = () => {
     triggerOnce: true,
   });
 
-  const [popupOpen, setPopupOpen] = useState(false);
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [expandedProject, setExpandedProject] = useState(null);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const projects = [
     {
@@ -121,55 +150,50 @@ const PortfolioComponent = () => {
     },
     {
       id: "5",
-      text: "Cette application de chat permet aux utilisateurs de s'inscrire, de se connecter, de discuter en privé avec d'autres utilisateurs, ainsi que de participer à des discussions publiques. L'application est construite avec Spring Boot pour le backend et Angular pour le frontend.",
+      text: "Cette application de chat permet aux utilisateurs de s'inscrire, de se connecter, de discuter en privé avec d'autres utilisateurs, ainsi que de participer à des discussions publiques.",
       image: ChatApp,
       techno: ["Spring Boot", "Angular", "WebSocket"],
       delay: 1.2,
     },
   ];
 
-  const handleVoirProjetClick = (index) => {
-    setPopupOpen(!popupOpen);
-    setSelectedProject(projects[index]);
+  const toggleExpand = (index) => {
+    if (isTransitioning) return;
+
+    setIsTransitioning(true);
+    setExpandedProject(expandedProject === index ? null : index);
+
+    setTimeout(() => {
+      setIsTransitioning(false);
+    }, 500);
   };
 
   return (
-    <>
-      <PortfolioContainer ref={ref}>
-        <Title isVisible={inView}>
-          <h1>Portfolio</h1>
-          <Hr />
-        </Title>
-        <CardContainer>
-          {projects.map((project, index) => {
-            return (
-              <Card
-                onClick={() => handleVoirProjetClick(index)}
-                isVisible={inView}
-                delay={project.delay}
-                key={project.id}
-              >
-                <ImgContainer>
-                  <img
-                    src={project.image}
-                    alt={project.image}
-                    width="350"
-                    height="400"
-                  />
-                </ImgContainer>
-              </Card>
-            );
-          })}
-        </CardContainer>
-      </PortfolioContainer>
-      {popupOpen && (
-        <Popup
-          onClose={handleVoirProjetClick}
-          visible={popupOpen}
-          projet={selectedProject}
-        ></Popup>
-      )}
-    </>
+    <PortfolioContainer ref={ref}>
+      <Title isVisible={inView}>
+        <h1>Portfolio</h1>
+        <Hr />
+      </Title>
+      <CardContainer>
+        {projects.map((project, index) => (
+          <Card
+            onClick={() => toggleExpand(index)}
+            isVisible={inView}
+            delay={project.delay}
+            key={project.id}
+            expanded={expandedProject === index}
+          >
+            <ImgContainer expanded={expandedProject === index}>
+              <img src={project.image} alt={project.image} />
+            </ImgContainer>
+            <ProjectInfo expanded={expandedProject === index}>
+              <p>{project.text}</p>
+              <p>Technologies: {project.techno.join(", ")}</p>
+            </ProjectInfo>
+          </Card>
+        ))}
+      </CardContainer>
+    </PortfolioContainer>
   );
 };
 

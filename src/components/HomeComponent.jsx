@@ -14,6 +14,7 @@ const HomeContainer = styled.div`
   background-size: cover;
   background-position: 100%;
   color: white;
+  font-family: var(--font-family-title);
 `;
 
 const TitleContainer = styled.div`

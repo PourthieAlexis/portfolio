@@ -24,6 +24,7 @@ const PresentationContainer = styled.section`
 `;
 
 const Title = styled.div`
+  font-family: var(--font-family-title);
   position: relative;
   font-size: xx-large;
   text-align: center;

@@ -12,15 +12,15 @@ const ParticlesComponent = () => {
       id="tsparticles"
       init={particlesInit}
       options={{
-        style: { position: "absolute", height: "100vh", width: "100%" },
+        style: {
+          position: "absolute",
+          height: "100vh",
+          width: "100%",
+        },
         fullScreen: { enable: false },
         fpsLimit: 120,
         interactivity: {
           events: {
-            onClick: {
-              enable: true,
-              mode: "push",
-            },
             onHover: {
               enable: true,
               mode: "repulse",
@@ -63,7 +63,7 @@ const ParticlesComponent = () => {
               enable: true,
               area: 800,
             },
-            value: 40,
+            value: 50,
           },
           opacity: {
             value: 0.5,
