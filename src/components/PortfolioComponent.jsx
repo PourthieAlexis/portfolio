@@ -6,6 +6,7 @@ import UBNI_Logo from "../assets/images/UBNI_logo.webp";
 import ChatApp from "../assets/images/chat_app.webp";
 import BrandChecker from "../assets/images/brand_checker.webp";
 import ArtShop from "../assets/images/Art_Shop_Logo.webp";
+import FinanceTracker from "../assets/images/finance_tracker.webp";
 import breakpoints from "../assets/breakpoints";
 
 const PortfolioContainer = styled.div`
@@ -154,6 +155,13 @@ const PortfolioComponent = () => {
       image: ChatApp,
       techno: ["Spring Boot", "Angular", "WebSocket"],
       delay: 1.2,
+    },
+    {
+      id: "6",
+      text: "Finance Tracker est une application de gestion financière personnelle qui permet de suivre vos dépenses, de gérer vos budgets, de visualiser vos soldes avec des graphiques et de définir des rappels",
+      image: FinanceTracker,
+      techno: ["NextJS", "Prisma", "ChartJS", "Next-Auth", "SWR", "Zod"],
+      delay: 1.5,
     },
   ];
 
