@@ -444,8 +444,7 @@ Error generating stack: `+t.message+`
   align-items: center;
 
   img {
-    max-width: ${r=>r.expanded?"40%":"50%"};
-    object-fit: contain;
+    max-width: ${r=>r.expanded?"60%":"70%"};
     transition: max-width 0.5s ease;
   }
 `,wye=X.div`
