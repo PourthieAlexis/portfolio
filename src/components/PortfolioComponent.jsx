@@ -8,6 +8,7 @@ import BrandChecker from "../assets/images/brand_checker.webp";
 import ArtShop from "../assets/images/Art_Shop_Logo.webp";
 import FinanceTracker from "../assets/images/finance_tracker.webp";
 import breakpoints from "../assets/breakpoints";
+import Github_Logo from "../assets/images/Github_Logo.webp";
 
 const PortfolioContainer = styled.div`
   min-height: 100vh;
@@ -95,14 +96,13 @@ const ImgContainer = styled.div`
   align-items: center;
 
   img {
-    max-width: ${(props) => (props.expanded ? "40%" : "50%")};
-    object-fit: contain;
+    max-width: ${(props) => (props.expanded ? "80%" : "50%")};
     transition: max-width 0.5s ease;
   }
 `;
 
 const ProjectInfo = styled.div`
-  padding: 1rem;
+  padding: 0 1rem;
   color: ${(props) => props.theme.textColor};
   opacity: ${(props) => (props.expanded ? 1 : 0)};
   max-height: ${(props) => (props.expanded ? "16rem" : "0")};
@@ -110,6 +110,28 @@ const ProjectInfo = styled.div`
   visibility: ${(props) => (props.expanded ? "visible" : "hidden")};
   position: ${(props) => (props.expanded ? "static" : "absolute")};
   transition: max-height 0.5s ease, opacity 0.5s ease;
+`;
+
+const GithubLink = styled.div`
+  padding: 0 1rem 1rem;
+  visibility: ${(props) => (props.expanded ? "visible" : "hidden")};
+  position: ${(props) => (props.expanded ? "static" : "absolute")};
+  opacity: ${(props) => (props.expanded ? 1 : 0)};
+  transition: opacity 0.5s ease;
+  display: flex;
+  align-items: center;
+  img {
+    border-radius: 0.5rem;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    color: ${(props) => props.theme.textColor};
+    margin-left: 0.5rem;
+    &:hover {
+      color: ${(props) => props.theme.primaryColor};
+    }
+  }
 `;
 
 const PortfolioComponent = () => {
@@ -126,6 +148,7 @@ const PortfolioComponent = () => {
       text: "Covoitease est un projet de covoiturage avec accès au personne à mobilité réduite, j'ai effectué ce projet dans une équipe agile à l'incubateur de Euratechnologies.",
       image: Covoitease,
       techno: ["Symfony API", "React", "MySQL", "Jira"],
+      githubLink: "https://github.com/PourthieAlexis/CoVoiTeam",
       delay: 0,
     },
     {
@@ -147,6 +170,7 @@ const PortfolioComponent = () => {
       text: "ArtShop est une application web basée sur Symfony et React, créée pour la vente d'œuvres d'art en ligne. L'application offre une expérience utilisateur intuitive pour explorer, acheter et interagir avec différentes œuvres d'art.",
       image: ArtShop,
       techno: ["Symfony", "React", "React-Query", "Docker"],
+      githubLink: "https://github.com/PourthieAlexis/ArtShop",
       delay: 0.9,
     },
     {
@@ -154,6 +178,7 @@ const PortfolioComponent = () => {
       text: "Cette application de chat permet aux utilisateurs de s'inscrire, de se connecter, de discuter en privé avec d'autres utilisateurs, ainsi que de participer à des discussions publiques.",
       image: ChatApp,
       techno: ["Spring Boot", "Angular", "WebSocket"],
+      githubLink: "https://github.com/PourthieAlexis/Chat-app",
       delay: 1.2,
     },
     {
@@ -161,6 +186,7 @@ const PortfolioComponent = () => {
       text: "Finance Tracker est une application de gestion financière personnelle qui permet de suivre vos dépenses, de gérer vos budgets, de visualiser vos soldes avec des graphiques et de définir des rappels",
       image: FinanceTracker,
       techno: ["NextJS", "Prisma", "ChartJS", "Next-Auth", "SWR", "Zod"],
+      githubLink: "https://github.com/PourthieAlexis/finance-tracker",
       delay: 1.5,
     },
   ];
@@ -198,6 +224,23 @@ const PortfolioComponent = () => {
               <p>{project.text}</p>
               <p>Technologies: {project.techno.join(", ")}</p>
             </ProjectInfo>
+            {project.githubLink && (
+              <GithubLink expanded={expandedProject === index}>
+                <img
+                  src={Github_Logo}
+                  alt="Logo github"
+                  width="32"
+                  height="32"
+                />
+                <a
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Voir sur GitHub
+                </a>
+              </GithubLink>
+            )}
           </Card>
         ))}
       </CardContainer>
