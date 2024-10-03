@@ -254,7 +254,7 @@ Error generating stack: `+t.message+`
   margin: 0;
   align-self: start;
   justify-content: start;
-`,F_e=()=>B.jsxs(H_e,{children:[B.jsxs(q_e,{children:[B.jsx(V_e,{children:"Bonjour, je suis"}),B.jsx(W_e,{children:"Alexis Pourthié"}),B.jsx(jP,{children:"Développeur Web"})]}),B.jsx(D_e,{})]}),IP="/portfolio/assets/Linkedin_logo-g7WJRGcW.webp",UP="/portfolio/assets/Github_logo-M7vysBvM.webp",j_e="/portfolio/assets/Alexis_Pourthié_CV-8CuxE5g5.pdf",I_e=K.div`
+`,F_e=()=>B.jsxs(H_e,{children:[B.jsxs(q_e,{children:[B.jsx(V_e,{children:"Bonjour, je suis"}),B.jsx(W_e,{children:"Alexis Pourthié"}),B.jsx(jP,{children:"Développeur Web"})]}),B.jsx(D_e,{})]}),IP="/portfolio/assets/Linkedin_logo-g7WJRGcW.webp",UP="/portfolio/assets/Github_logo-M7vysBvM.webp",j_e="/portfolio/assets/Alexis_Pourthié_CV-Pf-bl7Mz.pdf",I_e=K.div`
   position: fixed;
   left: 0;
   top: 10%;
