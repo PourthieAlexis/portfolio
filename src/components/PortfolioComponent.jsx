@@ -7,6 +7,7 @@ import ChatApp from "../assets/images/chat_app.webp";
 import BrandChecker from "../assets/images/brand_checker.webp";
 import ArtShop from "../assets/images/Art_Shop_Logo.webp";
 import FinanceTracker from "../assets/images/finance_tracker.webp";
+import Kronix from "../assets/images/kronix.webp";
 import breakpoints from "../assets/breakpoints";
 import Github_Logo from "../assets/images/Github_Logo.webp";
 
@@ -112,25 +113,35 @@ const ProjectInfo = styled.div`
   transition: max-height 0.5s ease, opacity 0.5s ease;
 `;
 
-const GithubLink = styled.div`
+const LinkContainer = styled.div`
   padding: 0 1rem 1rem;
   visibility: ${(props) => (props.expanded ? "visible" : "hidden")};
   position: ${(props) => (props.expanded ? "static" : "absolute")};
   opacity: ${(props) => (props.expanded ? 1 : 0)};
   transition: opacity 0.5s ease;
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
   img {
     border-radius: 0.5rem;
   }
-  a {
-    display: flex;
-    align-items: center;
-    color: ${(props) => props.theme.textColor};
-    margin-left: 0.5rem;
-    &:hover {
-      color: ${(props) => props.theme.primaryColor};
-    }
+`;
+
+const LinkWrapper = styled.div`
+  display: flex;
+`;
+
+const StyledLink = styled.a`
+  display: flex;
+  align-items: center;
+  color: ${(props) => props.theme.textColor};
+  margin-left: 0.5rem;
+  &:hover {
+    color: ${(props) => props.theme.primaryColor};
+  }
+  &:visited {
+    color: white;
   }
 `;
 
@@ -144,7 +155,7 @@ const PortfolioComponent = () => {
 
   const projects = [
     {
-      id: "1",
+      id: 1,
       text: "Covoitease est un projet de covoiturage avec accès au personne à mobilité réduite, j'ai effectué ce projet dans une équipe agile à l'incubateur de Euratechnologies.",
       image: Covoitease,
       techno: ["Symfony API", "React", "MySQL", "Jira"],
@@ -152,21 +163,21 @@ const PortfolioComponent = () => {
       delay: 0,
     },
     {
-      id: "2",
+      id: 2,
       text: "Joukemy est une application mobile qui permet de parier sur des matchs e-sport avec ses amis en utilisant un système de point. J'ai effectué ce projet pendant mon stage chez UBNI.",
       image: UBNI_Logo,
       techno: ["Laravel API", "React Native", "PostegreSQL"],
       delay: 0.3,
     },
     {
-      id: "3",
+      id: 3,
       text: "L'application BrandChecker permet de vérifier la disponibilité des noms de domaine avec différentes extensions. Elle utilise les Server-Sent Events (SSE) pour fournir des mises à jour en temps réel sur la disponibilité des noms de domaine.",
       image: BrandChecker,
       techno: ["Nuxt", "Server-Sent-Events", "Drizzle ORM", "SQLite"],
       delay: 0.6,
     },
     {
-      id: "4",
+      id: 4,
       text: "ArtShop est une application web basée sur Symfony et React, créée pour la vente d'œuvres d'art en ligne. L'application offre une expérience utilisateur intuitive pour explorer, acheter et interagir avec différentes œuvres d'art.",
       image: ArtShop,
       techno: ["Symfony", "React", "React-Query", "Docker"],
@@ -174,7 +185,7 @@ const PortfolioComponent = () => {
       delay: 0.9,
     },
     {
-      id: "5",
+      id: 5,
       text: "Cette application de chat permet aux utilisateurs de s'inscrire, de se connecter, de discuter en privé avec d'autres utilisateurs, ainsi que de participer à des discussions publiques.",
       image: ChatApp,
       techno: ["Spring Boot", "Angular", "WebSocket"],
@@ -182,12 +193,21 @@ const PortfolioComponent = () => {
       delay: 1.2,
     },
     {
-      id: "6",
+      id: 6,
       text: "Finance Tracker est une application de gestion financière personnelle qui permet de suivre vos dépenses, de gérer vos budgets, de visualiser vos soldes avec des graphiques et de définir des rappels",
       image: FinanceTracker,
       techno: ["NextJS", "Prisma", "ChartJS", "Next-Auth", "SWR", "Zod"],
       githubLink: "https://github.com/PourthieAlexis/finance-tracker",
       delay: 1.5,
+    },
+    {
+      id: 7,
+      text: "Ce projet est une pratique de développement frontend où j'ai implémenté un design trouvé sur Figma. Cela m'a permis de me concentrer sur la reproduction de composants d'interface utilisateur",
+      image: Kronix,
+      techno: ["NextJS", "Tailwind", "Swiper.js", "React Icons"],
+      githubLink: "https://github.com/PourthieAlexis/kronix",
+      deploy: "https://kronix-pourthie-alexis.vercel.app/",
+      delay: 1.8,
     },
   ];
 
@@ -224,23 +244,43 @@ const PortfolioComponent = () => {
               <p>{project.text}</p>
               <p>Technologies: {project.techno.join(", ")}</p>
             </ProjectInfo>
-            {project.githubLink && (
-              <GithubLink expanded={expandedProject === index}>
-                <img
-                  src={Github_Logo}
-                  alt="Logo github"
-                  width="32"
-                  height="32"
-                />
-                <a
-                  href={project.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Voir sur GitHub
-                </a>
-              </GithubLink>
-            )}
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                width: "100%",
+                padding: "1rem 0",
+              }}
+            >
+              <LinkContainer expanded={expandedProject === index}>
+                {project.githubLink && (
+                  <LinkWrapper>
+                    <img
+                      src={Github_Logo}
+                      alt="Logo GitHub"
+                      width="32"
+                      height="32"
+                    />
+                    <StyledLink
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Voir sur GitHub
+                    </StyledLink>
+                  </LinkWrapper>
+                )}
+                {project.deploy && (
+                  <StyledLink
+                    href={project.deploy}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Visiter le site
+                  </StyledLink>
+                )}
+              </LinkContainer>
+            </div>
           </Card>
         ))}
       </CardContainer>
