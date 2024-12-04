@@ -23,7 +23,7 @@ export default function Skills() {
     "/images/docker.png",
   ];
   return (
-    <section className="min-h-screen h-full" id="skills">
+    <section className="h-full" id="skills">
       <TitleBanner text="Compétences" />
       <div className="flex flex-col flex-1 items-center ">
         <SkillsList title="Front-end" images={imagesFrontEnd} />

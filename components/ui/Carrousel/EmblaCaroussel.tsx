@@ -61,21 +61,15 @@ export function EmblaCarousel() {
   ];
 
   return (
-    <div className="flex-1 flex items-center">
-      <div
-        className="relative max-w-screen-xl mx-auto overflow-hidden"
-        ref={emblaRef}
-      >
-        <div className="flex gap-32">
+    <div className="w-full max-w-[1400px] mx-auto overflow-hidden pt-8">
+      <div className="overflow-hidden" ref={emblaRef}>
+        <div className="flex">
           {projects.map((project) => (
-            <div key={project.id} className="min-w-[434px]">
-              <Project
-                image={project.image}
-                text={project.text}
-                techno={project.techno}
-                githubLink={project.githubLink}
-                deploy={project.deploy}
-              />
+            <div
+              key={project.id}
+              className="flex-[0_0_100%] md:flex-[0_0_50%] px-4 md:px-8"
+            >
+              <Project {...project} />
             </div>
           ))}
         </div>

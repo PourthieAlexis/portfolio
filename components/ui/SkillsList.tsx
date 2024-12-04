@@ -6,7 +6,7 @@ interface SkillsProps {
 
 export default function SkillsList({ title, images }: SkillsProps) {
   return (
-    <div className="flex flex-col items-center md:w-2/5 w-4/5 bg-blue-500 p-8 my-8 rounded-3xl">
+    <div className="flex flex-col items-center md:w-2/5 w-4/5 bg-blue-500 md:p-8 p-4 my-8 rounded-3xl">
       <div>
         <p className="text-white font-bold text-4xl mb-4">{title}</p>
       </div>
@@ -18,7 +18,7 @@ export default function SkillsList({ title, images }: SkillsProps) {
             alt={`Skill ${index + 1}`}
             width={64}
             height={64}
-            className="w-16 h-16 object-contain"
+            className="md:size-16 size-8 object-contain"
           />
         ))}
       </div>

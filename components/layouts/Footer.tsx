@@ -14,7 +14,7 @@ export default function Footer() {
       />
       <div className="flex flex-col bg-[#007BFF] h-56 items-center justify-center gap-2">
         <BackToTop />
-        <p className="text-2xl">Back to top</p>
+        <p className="md:text-2xl text-xl">Back to top</p>
         <div className="flex gap-4">
           <Link
             href="https://github.com/PourthieAlexis"
@@ -43,8 +43,10 @@ export default function Footer() {
             />
           </Link>
         </div>
-        <p className="text-lg">06.78.29.33.26 - alexispourthie@gmail.com</p>
-        <p className="text-lg">
+        <p className="md:text-lg text-base">
+          06.78.29.33.26 - alexispourthie@gmail.com
+        </p>
+        <p className="md:text-lg text-base">
           @2024 <span className="font-bold">Alexis Pourthié</span>
         </p>
       </div>
