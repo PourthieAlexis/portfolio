@@ -1,3 +1,4 @@
+import Image from "next/image";
 interface SkillsProps {
   title: string;
   images: string[];
@@ -11,11 +12,13 @@ export default function SkillsList({ title, images }: SkillsProps) {
       </div>
       <div className="flex flex-wrap gap-4">
         {images.map((image, index) => (
-          <img
+          <Image
             key={index}
             src={image}
             alt={`Skill ${index + 1}`}
-            className="w-18 h-18 object-contain"
+            width={64}
+            height={64}
+            className="w-16 h-16 object-contain"
           />
         ))}
       </div>

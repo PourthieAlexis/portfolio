@@ -4,7 +4,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Project from "./Project";
 
 export function EmblaCarousel() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({
+  const [emblaRef] = useEmblaCarousel({
     loop: false,
     dragFree: true,
   });
