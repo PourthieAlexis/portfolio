@@ -10,10 +10,11 @@ export default function About() {
         <div className="flex md:flex-row flex-col-reverse items-center gap-12 max-w-7xl w-full px-4">
           <div className="md:w-1/2 w-11/12 flex flex-col items-center md:gap-28 gap-12">
             <p className="md:w-2/3 w-full text-center text-xl">
-              J'ai 23 ans et je suis développeur web spécialisé en JavaScript,
-              TypeScript, et React, à la recherche d'un CDI. Passionné par les
-              technologies modernes et le code de qualité, je suis motivé pour
-              contribuer à des projets dynamiques et collaboratifs.
+              J&apos;ai 23 ans et je suis développeur web spécialisé en
+              JavaScript, TypeScript, et React, à la recherche d&apos;un CDI.
+              Passionné par les technologies modernes et le code de qualité, je
+              suis motivé pour contribuer à des projets dynamiques et
+              collaboratifs.
             </p>
             <div className="flex justify-around w-2/3 md:p-0 pb-8">
               <Link
