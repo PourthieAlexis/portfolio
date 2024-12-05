@@ -49,7 +49,7 @@ export default function Header() {
       </button>
 
       <Link
-        href="/CV/Alexis_Pourthié_CV.pdf"
+        href="/CV/Alexis_Pourthie_CV.pdf"
         target="_blank"
         rel="noopener noreferrer"
         className="hidden md:flex bg-blue-500 p-3 rounded-lg items-center gap-2 w-fit"
