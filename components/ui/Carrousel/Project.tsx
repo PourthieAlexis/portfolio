@@ -22,6 +22,7 @@ export default function Project({
         <Image
           src={image}
           fill
+          sizes="(max-width: 768px) 100vw, 50vw"
           alt="project image"
           className="object-contain rounded-lg"
           priority
