@@ -31,7 +31,7 @@ export const Navigation = ({ isOpen, onClose, items }: NavigationProps) => (
       ))}
       <li className="md:hidden">
         <Link
-          href="/CV/Alexis_Pourthié_CV.pdf"
+          href="/CV/Alexis_Pourthie_CV.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-blue-500 p-2 rounded-lg flex items-center gap-2 w-fit text-sm"
