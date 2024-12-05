@@ -20,7 +20,7 @@ export function EmblaCarousel() {
     {
       id: 2,
       text: "Joukemy est une application mobile qui permet de parier sur des matchs e-sport avec ses amis en utilisant un système de point. J'ai effectué ce projet pendant mon stage chez UBNI.",
-      image: "/images/ubni_logo.webp",
+      image: "/images/ubni_logo.png",
       techno: ["Laravel API", "React Native", "PostegreSQL"],
     },
     {
