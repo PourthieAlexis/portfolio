@@ -3,7 +3,7 @@ import TitleBanner from "./TitleBanner";
 
 export default function Portfolio() {
   return (
-    <section className="h-screen flex flex-col gap-8" id="portfolio">
+    <section className="min-h-screen" id="portfolio">
       <TitleBanner text="Projets" />
       <EmblaCarousel />
     </section>

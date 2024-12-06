@@ -29,7 +29,7 @@ export default function Header() {
 
   return (
     <header
-      className="flex items-center justify-between h-20 px-6 md:px-12 border-b-[#009DFF] border-b-2 relative"
+      className="flex items-center justify-between h-20 px-6 md:px-12 relative"
       id="home"
     >
       <div className="w-28 md:w-40" />

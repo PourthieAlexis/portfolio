@@ -10,9 +10,9 @@ export default function Footer() {
         width={5000}
         height={5000}
         alt="wave image"
-        className="w-full"
+        className="w-full "
       />
-      <div className="flex flex-col bg-[#007BFF] h-56 items-center justify-center gap-2">
+      <div className="flex flex-col bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 h-56 items-center justify-center gap-2">
         <BackToTop />
         <p className="md:text-2xl text-xl">Back to top</p>
         <div className="flex gap-4">

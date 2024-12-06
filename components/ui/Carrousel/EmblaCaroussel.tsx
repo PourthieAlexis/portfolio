@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Project from "./Project";
@@ -63,7 +64,7 @@ export function EmblaCarousel() {
   return (
     <div className="w-full max-w-[1400px] mx-auto overflow-hidden pt-8">
       <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex">
+        <div className="flex gap-8">
           {projects.map((project) => (
             <div
               key={project.id}
