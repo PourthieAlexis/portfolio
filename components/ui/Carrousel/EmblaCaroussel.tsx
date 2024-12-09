@@ -57,7 +57,7 @@ export function EmblaCarousel() {
       image: "/images/kronix.webp",
       techno: ["NextJS", "Tailwind", "Swiper.js", "React Icons"],
       githubLink: "https://github.com/PourthieAlexis/kronix",
-      deploy: "https://kronix-pourthie-alexis.vercel.app/",
+      deploy: "https://www.kronix.alexispourthie.fr/",
     },
   ];
 
@@ -68,7 +68,7 @@ export function EmblaCarousel() {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="flex-[0_0_100%] md:flex-[0_0_50%] px-4 md:px-8"
+              className="flex-[0_0_100%] md:flex-[0_0_45%] px-4 md:px-8"
             >
               <Project {...project} />
             </div>

@@ -12,6 +12,15 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      keyframes: {
+        swipe: {
+          "0%, 100%": { transform: "translateX(-18px)" },
+          "50%": { transform: "translateX(5px)" },
+        },
+      },
+      animation: {
+        swipe: "swipe 1.5s ease-in-out infinite",
+      },
     },
   },
   plugins: [],

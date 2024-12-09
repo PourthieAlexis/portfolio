@@ -18,7 +18,7 @@ export default function Project({
   deploy,
 }: ProjectType) {
   return (
-    <div className="flex flex-col bg-slate-900 rounded-xl p-6 h-full shadow-lg hover:shadow-xl transition-shadow duration-300">
+    <div className="flex flex-col bg-slate-900 rounded-xl p-6 h-full shadow-lg hover:shadow-xl transition-shadow duration-300  select-none">
       <div className="relative w-full aspect-video mb-6">
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 via-transparent to-transparent" />
         <Image
