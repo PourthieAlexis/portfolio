@@ -16,24 +16,32 @@ const BackgroundElements = () => (
 
 export default function About() {
   return (
-    <section
-      className="min-h-screen flex flex-col relative overflow-hidden"
-      id="about"
-    >
+    <section className="flex flex-col relative overflow-hidden" id="about">
       <TitleBanner text="À propos de moi" />
       <BackgroundElements />
-      <div className="flex-1 flex justify-center items-center relative z-10 py-10">
+      <div className="flex-1 flex justify-center items-center relative z-10 py-10 my-24">
         <div className="flex md:flex-row flex-col-reverse items-center gap-12 max-w-7xl w-full px-4">
           <div className="md:w-1/2 w-11/12 flex flex-col items-center md:gap-28 gap-12">
             <div className="relative">
               <div className="absolute -left-4 -top-4 w-12 h-12 border-t-2 border-l-2 border-blue-500/30" />
-              <p className="w-full text-center text-xl relative backdrop-blur-sm bg-black/20 p-6 rounded-lg">
-                J&apos;ai 23 ans et je suis développeur web spécialisé en
-                JavaScript, TypeScript, et React, à la recherche d&apos;un CDI.
-                Passionné par les technologies modernes et le code de qualité,
-                je suis motivé pour contribuer à des projets dynamiques et
-                collaboratifs.
-              </p>
+              <div className="w-full text-xl relative backdrop-blur-sm bg-black/20 p-6 rounded-lg">
+                <p className="mb-5">
+                  J&apos;ai 23 ans et je suis développeur Full Stack passionné,
+                  à la recherche d&apos;un CDI. Ce qui me motive vraiment,
+                  c&apos;est de créer du code propre et efficace tout en
+                  relevant de nouveaux défis techniques.
+                </p>
+                <p className="mb-5">
+                  J&apos;aime particulièrement explorer et apprendre de
+                  nouvelles technologies pour enrichir mes projets.
+                </p>
+                <p>
+                  Je recherche une entreprise où je pourrai évoluer et apporter
+                  ma touche à des projets stimulants, tout en continuant à
+                  développer mes compétences.
+                </p>
+              </div>
+
               <div className="absolute -right-4 -bottom-4 w-12 h-12 border-b-2 border-r-2 border-purple-500/30" />
             </div>
             <div className="flex justify-around w-2/3 md:p-0 pb-8 relative">

@@ -7,13 +7,13 @@ interface SkillsProps {
 
 export default function SkillsList({ title, images }: SkillsProps) {
   return (
-    <div className="relative group lg:w-2/6 md::w-3/6 w-full flex justify-center">
+    <div className="relative group lg:w-2/6 md:w-3/6 w-5/6 flex justify-center">
       <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-3xl transform rotate-3 transition-transform group-hover:rotate-1" />
 
       <div className="relative flex flex-col items-center md:w-full w-5/6 bg-gradient-to-br from-blue-600 to-purple-600 md:p-8 p-4 my-8 rounded-3xl shadow-lg transform transition-all duration-300 hover:scale-[1.02]">
         <div className="relative">
           <div className="absolute -left-4 top-1/2 w-2 h-8 bg-blue-300/50 transform -translate-y-1/2 rounded-full" />
-          <p className="text-white font-bold text-4xl mb-4 relative">
+          <p className="text-white font-bold md:text-4xl text-2xl mb-4 relative">
             {title}
             <span className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-blue-300/50 to-transparent" />
           </p>

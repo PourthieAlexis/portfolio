@@ -1,14 +1,16 @@
 "use client";
 
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
+import { EmblaCarouselType } from "embla-carousel";
 import Project from "./Project";
 
 export function EmblaCarousel() {
-  const [emblaRef] = useEmblaCarousel({
+  const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
     dragFree: true,
   });
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   const projects = [
     {
@@ -61,8 +63,23 @@ export function EmblaCarousel() {
     },
   ];
 
+  const onScroll = useCallback((emblaApi: EmblaCarouselType) => {
+    const progress = Math.max(0, Math.min(1, emblaApi.scrollProgress()));
+    setScrollProgress(progress * 100);
+  }, []);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+
+    onScroll(emblaApi);
+    emblaApi
+      .on("reInit", onScroll)
+      .on("scroll", onScroll)
+      .on("slideFocus", onScroll);
+  }, [emblaApi, onScroll]);
+
   return (
-    <div className="w-full max-w-[1400px] mx-auto overflow-hidden pt-8">
+    <div className="w-full max-w-[1400px] mx-auto overflow-hidden pt-8 relative">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex gap-8">
           {projects.map((project) => (
@@ -73,6 +90,12 @@ export function EmblaCarousel() {
               <Project {...project} />
             </div>
           ))}
+        </div>
+        <div className="absolute top-1 md:right-8 left-1/2 md:left-auto -translate-x-1/2 md:translate-x-0 h-1.5 w-52 max-w-[90%] overflow-hidden rounded-lg bg-[#121212]">
+          <div
+            className="absolute top-0 bottom-0 left-[-100%] w-full bg-slate-100"
+            style={{ transform: `translate3d(${scrollProgress}%, 0px, 0px)` }}
+          />
         </div>
       </div>
     </div>

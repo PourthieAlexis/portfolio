@@ -5,7 +5,7 @@ import { SlScreenDesktop } from "react-icons/sl";
 
 export default function Portfolio() {
   return (
-    <section className="min-h-screen" id="portfolio">
+    <section className="pb-12" id="portfolio">
       <TitleBanner text="Projets" />
       <div className="flex flex-col items-center mt-4">
         <div className="relative">

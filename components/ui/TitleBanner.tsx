@@ -8,14 +8,6 @@ export default function TitleBanner({ text }: TitleBannerProps) {
   return (
     <div className="relative h-32 flex justify-center items-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900">
-        <div className="absolute inset-0 opacity-10">
-          <div className="h-full w-full grid grid-cols-12 gap-px">
-            {[...Array(24)].map((_, i) => (
-              <div key={i} className="border-t border-white/20" />
-            ))}
-          </div>
-        </div>
-
         <div className="absolute top-0 left-1/4 w-32 h-32 bg-blue-500/20 rounded-full blur-2xl transform -translate-y-1/2" />
         <div className="absolute bottom-0 right-1/4 w-32 h-32 bg-purple-500/20 rounded-full blur-2xl transform translate-y-1/2" />
       </div>
