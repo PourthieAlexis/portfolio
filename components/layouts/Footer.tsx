@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer>
       <Image
-        src="/images/wave.png"
+        src="/images/wave.svg"
         width={5000}
         height={5000}
         alt="wave image"
