@@ -1,7 +1,5 @@
 "use client";
-import Image from "next/image";
 import TitleBanner from "../TitleBanner";
-import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import BackgroundElements from "./BackgroundElements";
 import AboutContent from "./AboutContent";
