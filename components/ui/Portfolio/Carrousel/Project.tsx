@@ -18,7 +18,7 @@ export default function Project({
   deploy,
 }: ProjectType) {
   return (
-    <div className="flex flex-col bg-slate-900 rounded-xl p-6 h-full shadow-lg hover:shadow-xl transition-shadow duration-300  select-none">
+    <div className="flex flex-col bg-slate-900 rounded-xl p-5 h-full shadow-lg hover:shadow-xl transition-shadow duration-300 select-none">
       <div className="relative w-full aspect-video mb-6">
         <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 via-transparent to-transparent" />
         <Image
@@ -31,12 +31,10 @@ export default function Project({
         />
       </div>
 
-      <div className="flex flex-col flex-1 gap-4">
-        <div className="space-y-4 flex-1">
+      <div className="flex flex-col gap-4">
+        <div className="space-y-4 ">
           <div className="h-px bg-slate-800" />
-          <p className="line-clamp-4 text-sm sm:text-base text-slate-300">
-            {text}
-          </p>
+          <p className="text-sm sm:text-base text-slate-300">{text}</p>
         </div>
 
         <div className="flex gap-2 flex-wrap">

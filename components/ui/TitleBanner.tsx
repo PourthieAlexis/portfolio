@@ -2,11 +2,19 @@ import React from "react";
 
 interface TitleBannerProps {
   text: string;
+  hasBeenVisible: boolean;
 }
 
-export default function TitleBanner({ text }: TitleBannerProps) {
+export default function TitleBanner({
+  text,
+  hasBeenVisible,
+}: TitleBannerProps) {
   return (
-    <div className="relative h-32 flex justify-center items-center overflow-hidden">
+    <div
+      className={`relative h-32 flex justify-center items-center overflow-hidden transition-all duration-700 delay-300 transform ${
+        hasBeenVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      }`}
+    >
       <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900">
         <div className="absolute top-0 left-1/4 w-32 h-32 bg-blue-500/20 rounded-full blur-2xl transform -translate-y-1/2" />
         <div className="absolute bottom-0 right-1/4 w-32 h-32 bg-purple-500/20 rounded-full blur-2xl transform translate-y-1/2" />

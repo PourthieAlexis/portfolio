@@ -40,7 +40,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="absolute w-full z-50">
+      <header className="absolute w-full z-50 animate-[headerSlideDown_0.8s_ease-out]">
         <div className="flex items-center justify-between h-20 px-6 md:px-12 bg-transparent">
           <div className="w-28 md:w-40" />
           <Navigation
@@ -59,7 +59,7 @@ export default function Header() {
             href="/CV/Alexis_Pourthie_CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:flex bg-blue-500 p-3 rounded-lg items-center gap-2 w-fit"
+            className="hidden md:flex bg-blue-500 p-3 rounded-lg items-center gap-2 w-fit hover:bg-blue-600 transition-colors"
           >
             CV <MdOutlineFileDownload size="1.5rem" />
           </Link>
