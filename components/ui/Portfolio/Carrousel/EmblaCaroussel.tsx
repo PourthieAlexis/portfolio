@@ -3,7 +3,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { EmblaCarouselType } from "embla-carousel";
-import Project from "./Project";
+import Project from "@/components/ui/Portfolio/Carrousel/Project";
 
 export function EmblaCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({

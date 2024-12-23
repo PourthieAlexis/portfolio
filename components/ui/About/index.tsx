@@ -1,34 +1,15 @@
 "use client";
-import TitleBanner from "../TitleBanner";
-import { useEffect, useRef, useState } from "react";
-import BackgroundElements from "./BackgroundElements";
-import AboutContent from "./AboutContent";
-import ProfileImage from "./ProfileImage";
+import TitleBanner from "@/components/ui/TitleBanner";
+import { useRef } from "react";
+import BackgroundElements from "@/components/ui/About/BackgroundElements";
+import AboutContent from "@/components/ui/About/AboutContent";
+import ProfileImage from "@/components/ui/About/ProfileImage";
+import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 
 export default function About() {
-  const [hasBeenVisible, setHasBeenVisible] = useState(false);
   const sectionRef = useRef(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasBeenVisible) {
-          setHasBeenVisible(true);
-        }
-      },
-      { threshold: 0.6 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, [hasBeenVisible]);
+  const hasBeenVisible = useIntersectionObserver(sectionRef);
 
   return (
     <section

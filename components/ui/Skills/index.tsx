@@ -1,32 +1,13 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import SkillsList from "./SkillsList";
-import TitleBanner from "../TitleBanner";
+import SkillsList from "@/components/ui/Skills/SkillsList";
+import TitleBanner from "@/components/ui/TitleBanner";
+import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 
 export default function Skills() {
-  const [hasBeenVisible, setHasBeenVisible] = useState(false);
   const sectionRef = useRef(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasBeenVisible) {
-          setHasBeenVisible(true);
-        }
-      },
-      { threshold: 0.6 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, [hasBeenVisible]);
+  const hasBeenVisible = useIntersectionObserver(sectionRef);
 
   const imagesFrontEnd = [
     "/images/vue.png",

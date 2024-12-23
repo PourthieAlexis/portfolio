@@ -1,34 +1,15 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { EmblaCarousel } from "./Carrousel/EmblaCaroussel";
-import TitleBanner from "../TitleBanner";
+import TitleBanner from "@/components/ui/TitleBanner";
 import { FaHandPointer } from "react-icons/fa";
 import { SlScreenDesktop } from "react-icons/sl";
+import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 
 export default function Portfolio() {
   const sectionRef = useRef(null);
-  const [hasBeenVisible, setHasBeenVisible] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasBeenVisible) {
-          setHasBeenVisible(true);
-        }
-      },
-      { threshold: 0.6 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, [hasBeenVisible]);
+  const hasBeenVisible = useIntersectionObserver(sectionRef);
 
   return (
     <section

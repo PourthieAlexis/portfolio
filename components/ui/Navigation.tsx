@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { NavItem, NavLink } from "./NavLink";
+import { NavLink } from "@/components/ui/NavLink";
+import { NavItem } from "@/components/ui/NavLink";
 import { MdOutlineFileDownload } from "react-icons/md";
 
 interface NavigationProps {

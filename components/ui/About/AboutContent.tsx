@@ -1,4 +1,4 @@
-import SocialLink from "./SocialLink";
+import SocialLink from "@/components/ui/About/SocialLink";
 
 type AboutContentProps = {
   hasBeenVisible: boolean;
