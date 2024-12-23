@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import SkillsList from "@/components/ui/Skills/SkillsList";
 import TitleBanner from "@/components/ui/TitleBanner";
 import useIntersectionObserver from "@/hooks/useIntersectionObserver";

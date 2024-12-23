@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { EmblaCarousel } from "./Carrousel/EmblaCaroussel";
 import TitleBanner from "@/components/ui/TitleBanner";
 import { FaHandPointer } from "react-icons/fa";
