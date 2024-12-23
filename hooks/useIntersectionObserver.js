@@ -19,7 +19,7 @@ export default function useIntersectionObserver(ref, options = {}) {
     };
 
     const observer = new IntersectionObserver(handleIntersect, {
-      threshold: 0.1,
+      threshold: 0.4,
       ...options,
     });
 
