@@ -4,6 +4,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { EmblaCarouselType } from "embla-carousel";
 import Project from "@/components/ui/Portfolio/Carrousel/Project";
+import { text } from "stream/consumers";
 
 export function EmblaCarousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -60,6 +61,24 @@ export function EmblaCarousel() {
       techno: ["NextJS", "Tailwind", "Swiper.js", "React Icons"],
       githubLink: "https://github.com/PourthieAlexis/kronix",
       deploy: "https://www.kronix.alexispourthie.fr/",
+    },
+    {
+      id: 8,
+      text: "Social Network est un projet de réseau social basé sur une architecture microservices. Il s'agit uniquement du backend de l'application, composé de plusieurs services qui communiquent entre eux via Kafka.",
+      image: "/images/microservice.png",
+      techno: [
+        "Spring Boot",
+        "ExpressJs",
+        "Symfony",
+        "Docker",
+        "Kafka",
+        "Redis",
+        "MongoDB",
+        "PostgreSQL",
+        "MySQL",
+        "Microservices",
+      ],
+      githubLink: "https://github.com/PourthieAlexis/social-network",
     },
   ];
 

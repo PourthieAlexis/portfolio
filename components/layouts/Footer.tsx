@@ -47,7 +47,7 @@ export default function Footer() {
           06.78.29.33.26 - alexispourthie@gmail.com
         </p>
         <p className="md:text-lg text-base">
-          @2024 <span className="font-bold">Alexis Pourthié</span>
+          @2025 <span className="font-bold">Alexis Pourthié</span>
         </p>
       </div>
     </footer>
