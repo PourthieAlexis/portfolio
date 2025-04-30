@@ -1,4 +1,5 @@
 import { Roboto } from "next/font/google";
+import Image from "next/image";
 import { FaCode } from "react-icons/fa6";
 
 const roboto = Roboto({
@@ -8,10 +9,15 @@ const roboto = Roboto({
 
 export default function Accueil() {
   return (
-    <section
-      className="h-screen bg-[url('/images/programming-background.jpg')] bg-no-repeat bg-cover bg-center relative overflow-hidden"
-      id="home"
-    >
+    <section className="h-screen relative overflow-hidden" id="home">
+      <Image
+        src="/images/programming-background.jpg"
+        alt="background"
+        fill
+        priority
+        className="object-cover object-center -z-10"
+      />
+
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-black/40">
         <div className="flex flex-col justify-center h-full max-w-6xl mx-auto px-6">
           <div className={`${roboto.className} text-white space-y-6`}>
